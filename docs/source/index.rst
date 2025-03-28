@@ -43,7 +43,7 @@ Additional Resources
 - `Module Index <modindex.html>`_
 - `Search <search.html>`_
 
-.. image:: _static/tfilterpy_logo.png
+.. image:: tfilterPy/docs/source/_static/tfilterpy_logo.png
    :alt: tfilterpy Logo
    :align: center
    :width: 200px

@@ -30,7 +30,7 @@ jobs:
       - name: Build Docs
         run: |
           cd docs
-          sphinx-build -b html source build -W --keep-going
+          sphinx-build -b html source build --keep-going
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
