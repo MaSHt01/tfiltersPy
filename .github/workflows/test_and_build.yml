@@ -7,7 +7,7 @@ on:
     tags:
       - 'v*.*.*'  # Only trigger on version tags, if desired
 
-      
+
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
@@ -23,11 +23,11 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Cache pip
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ matrix.python-version }}
+      # - name: Cache pip
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: ~/.cache/pip
+      #     key: ${{ runner.os }}-pip-${{ matrix.python-version }}
 
       - name: Install build tools
         run: |
