@@ -37,3 +37,5 @@ jobs:
         with:
           publish_dir: ./docs/build
           keep_files: false
+          publish_branch: gh-pages
+          github_token: ${{ secrets.PY_GH_PAGES_TOKEN }}
