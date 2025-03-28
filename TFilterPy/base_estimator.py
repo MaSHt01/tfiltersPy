@@ -1,3 +1,6 @@
+import dask.array as da
+
+
 class BaseEstimator:
     """
     Base class for all estimators in the TFilterPy package.
@@ -13,6 +16,29 @@ class BaseEstimator:
         """
         self.name = name or self.__class__.__name__
 
+    @staticmethod
+    def to_dask_array(numpy_array, chunk_size=None):
+        """
+        Convert a NumPy array to a Dask array with specified chunking.
+        If chunk_size is None, use Dask's automatic chunking.
+        
+        Parameters:
+            numpy_array (np.ndarray): Input array.
+            chunk_size (int or tuple, optional): Desired chunk size.
+            
+        Returns:
+            da.Array: Dask array version of numpy_array.
+        """
+        if chunk_size is None:
+            return da.from_array(numpy_array, chunks="auto")
+        else:
+            # If a single integer is provided, use it for all dimensions.
+            if isinstance(chunk_size, int):
+                chunks = tuple(chunk_size for _ in range(numpy_array.ndim))
+            else:
+                chunks = chunk_size
+            return da.from_array(numpy_array, chunks=chunks)
+    
     def get_params(self, deep=True):
         """
         Get parameters of the estimator.

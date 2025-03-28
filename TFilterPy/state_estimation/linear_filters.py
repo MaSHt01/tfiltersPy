@@ -63,6 +63,7 @@ class DaskKalmanFilter(ParameterEstimator):
         observation_noise_cov: Union[np.ndarray, da.Array],
         initial_state: Union[np.ndarray, da.Array],
         initial_covariance: Union[np.ndarray, da.Array],
+        chunk_size: int = 64,
         estimation_strategy: str = "residual_analysis",
     ):
 
@@ -87,32 +88,32 @@ class DaskKalmanFilter(ParameterEstimator):
 
         # Convert to Dask arrays if necessary
         self.F = (
-            da.from_array(state_transition_matrix, chunks=state_transition_matrix.shape)
+            self.to_dask_array(state_transition_matrix, chunk_size)
             if isinstance(state_transition_matrix, np.ndarray)
             else state_transition_matrix
         )
         self.H = (
-            da.from_array(observation_matrix, chunks=observation_matrix.shape)
+            self.to_dask_array(observation_matrix, chunk_size)
             if isinstance(observation_matrix, np.ndarray)
             else observation_matrix
         )
         self.Q = (
-            da.from_array(process_noise_cov, chunks=process_noise_cov.shape)
+            self.to_dask_array(process_noise_cov, chunk_size)
             if isinstance(process_noise_cov, np.ndarray)
             else process_noise_cov
         )
         self.R = (
-            da.from_array(observation_noise_cov, chunks=observation_noise_cov.shape)
+            self.to_dask_array(observation_noise_cov, chunk_size)
             if isinstance(observation_noise_cov, np.ndarray)
             else observation_noise_cov
         )
         self.x = (
-            da.from_array(initial_state, chunks=initial_state.shape)
+            self.to_dask_array(initial_state, chunk_size)
             if isinstance(initial_state, np.ndarray)
             else initial_state
         )
         self.P = (
-            da.from_array(initial_covariance, chunks=initial_covariance.shape)
+            self.to_dask_array(initial_covariance, chunk_size)
             if isinstance(initial_covariance, np.ndarray)
             else initial_covariance
         )

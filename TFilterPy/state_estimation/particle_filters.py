@@ -182,37 +182,3 @@ class DaskParticleFilter(ParameterEstimator):
         residuals = da.from_array(np.vstack(residuals)) if self.use_dask else np.vstack(residuals)
         return state_estimates, residuals
 
-# Example usage:
-if __name__ == '__main__':
-    # Define a simple 2D state model (position and velocity)
-    F = np.array([[1, 1],
-                  [0, 1]])
-    H = np.array([[1, 0]])  # Only position is measured
-
-    # Define noise covariances
-    Q = np.eye(2) * 0.01
-    R = np.eye(1) * 0.1
-
-    initial_state = np.array([0, 1])
-
-    # Create the particle filter instance with Dask enabled
-    pf = DaskParticleFilter(F, H, Q, R, initial_state, num_particles=1000, use_dask=True, estimation_strategy="residual_analysis")
-
-    # Simulate some measurements over 10 time steps
-    true_state = initial_state.copy()
-    measurements_list = []
-    np.random.seed(42)
-    for _ in range(10):
-        true_state = F @ true_state
-        measurement = H @ true_state + np.random.normal(0, np.sqrt(R[0, 0]))
-        measurements_list.append(measurement)
-    measurements_array = da.from_array(np.vstack(measurements_list), chunks=(5, H.shape[0]))
-
-    # Run the filter over these measurements (for parameter estimation, run_filter is used)
-    state_estimates, residuals = pf.run_filter(measurements_array)
-    print("Final estimated state:", pf.state)
-
-    # Use one of the parameter estimation methods (e.g., residual_analysis)
-    Q_est, R_est = pf.estimate_parameters(measurements_array)
-    print("Estimated Q:", Q_est.compute() if pf.use_dask else Q_est)
-    print("Estimated R:", R_est.compute() if pf.use_dask else R_est)
