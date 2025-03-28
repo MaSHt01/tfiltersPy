@@ -18,7 +18,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Notebook Examples" href="quickstart.html" /> 
+    <link rel="next" title="API Reference" href="api_usage.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,7 +42,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Notebook Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_usage.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">TFilterPy</a></li>
 </ul>
 
@@ -73,8 +73,8 @@
   <a class="reference internal image-reference" href="_images/tfilters-logo.jpeg"><img alt="tfilters logo" class="align-center" src="_images/tfilters-logo.jpeg" style="width: 500px;" /></a>
 <section id="welcome-to-tfilterspy-s-documentation">
 <h1>Welcome to <strong>tfilterspy</strong>’s documentation!<a class="headerlink" href="#welcome-to-tfilterspy-s-documentation" title="Permalink to this heading"></a></h1>
-<p><strong>tfilterspy</strong> is a Python package for state estimation using Bayesian filtering techniques such as Kalman and Particle Filters.
-It supports distributed computing with Dask, allowing you to process large datasets efficiently.</p>
+<p>TFiltersPy is your new favorite Python library for implementing state-of-the-art Bayesian filtering techniques like Kalman Filters and Particle Filters.
+Whether you’re working on noisy linear systems, nonlinear dynamics, or want to sound cool at a party when you say “I coded my own Kalman Filter,” this is the library for you!</p>
 </section>
 <section id="features">
 <h1>Features<a class="headerlink" href="#features" title="Permalink to this heading"></a></h1>
@@ -84,14 +84,30 @@ It supports distributed computing with Dask, allowing you to process large datas
 <li><p><strong>Distributed Computation:</strong> Leveraging Dask for scalability.</p></li>
 <li><p><strong>Uncertainty Quantification:</strong> Built-in methods for assessing estimation confidence.</p></li>
 </ul>
-</section>
-<section id="quick-start">
-<h1>Quick Start<a class="headerlink" href="#quick-start" title="Permalink to this heading"></a></h1>
-<p>For a quick introduction on how to get started with <strong>tfilterspy</strong>, check out the <span class="xref std std-ref">quickstart</span> guide.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<p>Getting started with <strong>tfilterspy</strong> is as easy as pie (or Pi)! 🍰</p>
+<p>No need for complicated rituals or secret handshakes—just open your terminal and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>tfilterpy
+</pre></div>
+</div>
+<p>That’s it! In a flash, you’re all set to start filtering out the noise from your data.</p>
+<p>Prefer to tinker under the hood? If you’re feeling adventurous, clone the repo and install it in editable mode:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/LeparaLaMapara/tfilterspy.git
+<span class="nb">cd</span><span class="w"> </span>tfilterspy
+pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+</pre></div>
+</div>
+<p>Now, let the magic of Bayesian filtering begin! Enjoy the fun of transforming noisy data into clear insights with <strong>tfilterspy</strong>.</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Notebook Examples</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="api_usage.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_usage.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_usage.html#key-classes">Key Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_usage.html#detailed-documentation">Detailed Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_usage.html#additional-notes">Additional Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_usage.html#indices-and-tables">Indices and Tables</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">TFilterPy</a><ul>
@@ -100,6 +116,7 @@ It supports distributed computing with Dask, allowing you to process large datas
 </li>
 </ul>
 </div>
+</section>
 </section>
 <section id="examples">
 <h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h1>
@@ -126,7 +143,7 @@ It supports distributed computing with Dask, allowing you to process large datas
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="quickstart.html" class="btn btn-neutral float-right" title="Notebook Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="api_usage.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

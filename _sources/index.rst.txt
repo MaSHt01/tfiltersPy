@@ -13,8 +13,8 @@ Welcome to **tfilterspy**'s documentation!
 
 
 
-**tfilterspy** is a Python package for state estimation using Bayesian filtering techniques such as Kalman and Particle Filters.
-It supports distributed computing with Dask, allowing you to process large datasets efficiently.
+TFiltersPy is your new favorite Python library for implementing state-of-the-art Bayesian filtering techniques like Kalman Filters and Particle Filters. 
+Whether you're working on noisy linear systems, nonlinear dynamics, or want to sound cool at a party when you say "I coded my own Kalman Filter," this is the library for you!
 
 Features
 --------
@@ -23,18 +23,34 @@ Features
 - **Distributed Computation:** Leveraging Dask for scalability.
 - **Uncertainty Quantification:** Built-in methods for assessing estimation confidence.
 
-Quick Start
------------
-For a quick introduction on how to get started with **tfilterspy**, check out the :ref:`quickstart` guide.
+Installation
+============
+
+Getting started with **tfilterspy** is as easy as pie (or Pi)! 🍰
+
+No need for complicated rituals or secret handshakes—just open your terminal and run:
+
+.. code-block:: bash
+
+    pip install tfilterpy
+
+That’s it! In a flash, you’re all set to start filtering out the noise from your data.
+
+Prefer to tinker under the hood? If you’re feeling adventurous, clone the repo and install it in editable mode:
+
+.. code-block:: bash
+
+    git clone https://github.com/LeparaLaMapara/tfilterspy.git
+    cd tfilterspy
+    pip install -e .
+
+Now, let the magic of Bayesian filtering begin! Enjoy the fun of transforming noisy data into clear insights with **tfilterspy**.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   quickstart
-   installation
-   usage
-   api
+   api_usage
    modules
 
 Examples
