@@ -27,6 +27,9 @@ Key Classes
 - **ParticleFilter**  
   For when your system is too wild for a Kalman filter, our Particle Filter uses a swarm of particles to track nonlinear, non-Gaussian systems. It’s like herding cats – but with probabilities! 🐱🎲
 
+
+
+
 Detailed Documentation
 ----------------------
 For the nitty-gritty details of each class and method, check out the module docs below:
@@ -55,6 +58,14 @@ For the nitty-gritty details of each class and method, check out the module docs
    :members:
    :undoc-members:
    :show-inheritance:
+
+TFiltersPy Classes
+=========
+
+.. toctree::
+   :maxdepth: 4
+
+   TFiltersPy
 
 Additional Notes
 ----------------

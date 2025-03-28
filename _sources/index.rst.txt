@@ -50,7 +50,6 @@ Now, let the magic of Bayesian filtering begin! Enjoy the fun of transforming no
    :caption: Contents:
 
    api_usage
-   modules
    examples_index
 
 Examples
