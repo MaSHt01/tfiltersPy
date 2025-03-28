@@ -8,9 +8,8 @@
    :align: center
 
 
-Welcome to **tfilterspy**'s documentation!
+Welcome to tfilterspy documentation – where we say "Sawubona, Molo, Hallo, Dumela, Ndaa, Xewani, and a Dinstang in Sipitori style!" and filter data like true South African rockstars!
 -----------------------------------------
-
 
 
 TFiltersPy is your new favorite Python library for implementing state-of-the-art Bayesian filtering techniques like Kalman Filters and Particle Filters. 
@@ -21,18 +20,18 @@ Features
 - **Kalman Filtering:** Robust state estimation with uncertainty quantification.
 - **Particle Filtering:** Non-linear and non-Gaussian filtering methods.
 - **Distributed Computation:** Leveraging Dask for scalability.
-- **Uncertainty Quantification:** Built-in methods for assessing estimation confidence.
+- **Uncertainty Quantification:** Built-in methods for assessing estimation confidence [TODO]
 
 Installation
 ============
 
-Getting started with **tfilterspy** is as easy as pie (or Pi)! 🍰
+Getting started with **tfilterspy** is as easy as Pi ! 🍰
 
 No need for complicated rituals or secret handshakes—just open your terminal and run:
 
 .. code-block:: bash
 
-    pip install tfilterpy
+    pip install tfilterspy
 
 That’s it! In a flash, you’re all set to start filtering out the noise from your data.
 
@@ -52,6 +51,7 @@ Now, let the magic of Bayesian filtering begin! Enjoy the fun of transforming no
 
    api_usage
    modules
+   examples_index
 
 Examples
 --------
