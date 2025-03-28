@@ -30,6 +30,10 @@ jobs:
       - name: Build package
         run: python -m build
 
+      - name: Install Package
+        run: |
+          pip install -e .
+
       - name: Publish to PyPI
         if: github.ref_type == 'tag'  # Only publish on tag builds
         env:
