@@ -10,27 +10,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4  # Update to latest version
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v5  # Update to latest version
+        uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
       - name: Install Dependencies
         run: |
-          python -m pip install --upgrade pip  # Ensure latest pip
-          pip install sphinx sphinx-rtd-theme sphinx-autodoc-typehints
-          pip install -e .  # Install your package (assumes setup.py or pyproject.toml)
-
+          python -m pip install --upgrade pip
+          # Optionally, pin specific versions for reproducibility
+          pip install sphinx==6.2.1 sphinx-rtd-theme==1.2.0 sphinx-autodoc-typehints==1.15.0
+          pip install -e .
+          
       - name: Build Docs
         run: |
           cd docs
-          sphinx-build -b html source build -W --keep-going  # Treat warnings as errors, but continue
+          sphinx-build -b html source build -W --keep-going
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use built-in token instead
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/build
-          keep_files: false  # Overwrite existing GitHub Pages content
+          keep_files: false
