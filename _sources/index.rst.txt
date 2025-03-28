@@ -2,15 +2,15 @@
    sphinx-quickstart on Sun Jan 12 00:32:16 2025.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
+.. image:: _static/tfilters-logo.jpeg
+   :alt: tfilters logo
+   :width: 500px
+   :align: center
 
 
 Welcome to **tfilterpy**'s documentation!
 -----------------------------------------
 
-.. image:: _static/tfilters-logo.jpeg
-   :alt: tfilters logo
-   :width: 200px
-   :align: center
 
 
 **tfilterpy** is a Python package for state estimation using Bayesian filtering techniques such as Kalman and Particle Filters.
