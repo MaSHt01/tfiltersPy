@@ -63,10 +63,3 @@ Additional Resources
 - `Module Index <modindex.html>`_
 - `Search <search.html>`_
 
-
-
-Indices and Tables
-==================
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
