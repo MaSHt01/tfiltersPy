@@ -6,4 +6,4 @@ Notebook Examples
    :caption: Jupyter Notebooks
    :glob:
 
-   ../../examples/notebooks/*.ipynb
+   ../../examples/notebooks/introduction-to-kalman-filters.ipynb
