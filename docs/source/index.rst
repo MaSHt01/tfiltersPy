@@ -3,11 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-tfilters Documentation
-======================
 
 Welcome to **tfilterpy**'s documentation!
 -----------------------------------------
+
+.. image:: ../_static/tfilterpy_logo.png
+   :alt: tfilterpy Logo
+   :align: center
+   :width: 200px
 
 **tfilterpy** is a Python package for state estimation using Bayesian filtering techniques such as Kalman and Particle Filters.
 It supports distributed computing with Dask, allowing you to process large datasets efficiently.
@@ -43,10 +46,7 @@ Additional Resources
 - `Module Index <modindex.html>`_
 - `Search <search.html>`_
 
-.. image:: tfilterPy/docs/source/_static/tfilterpy_logo.png
-   :alt: tfilterpy Logo
-   :align: center
-   :width: 200px
+
 
 Indices and Tables
 ==================
