@@ -5,28 +5,22 @@ on:
     branches:
       - main
     tags:
-      - 'v*.*.*'  # Only trigger on version tags, if desired
-
+      - 'v*.*.*'  # Only trigger on version tags
 
 jobs:
   build-and-publish:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: [3.10, 3.11]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Set up Python "3.10"
+      - name: Set up Python 3.10
         uses: actions/setup-python@v4
         with:
-          python-version:  "3.10"
+          python-version: "3.10"
           check-latest: false
-          token: ***
           update-environment: true
           allow-prereleases: false
-
 
       - name: Install build tools
         run: |
@@ -40,5 +34,5 @@ jobs:
         if: github.ref_type == 'tag'  # Only publish on tag builds
         env:
           TWINE_USERNAME: __token__
-          TWINE_PASSWORD: REALTHABANGLUKHETHO_PYPI_API_TOKEN
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
         run: python -m twine upload dist/*
