@@ -1,8 +1,9 @@
-Examples
-========
+Notebook Examples
+================
+
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Notebook Examples
+   :maxdepth: 1
+   :caption: Jupyter Notebooks
 
-   tfilterPy/examples/notebooks/*.ipynb
+   ../../examples/notebooks/*.ipynb
