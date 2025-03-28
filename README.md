@@ -2,20 +2,20 @@
   <img src="branding/logo/tfilters-logo.jpeg?" alt="tfilterspy logo"/>
 </p>
 
-# **TFilterPy** 🌀
+# **TFiltersPy** 🌀
 
-![PyPI Version](https://img.shields.io/pypi/v/tfilterpy?color=blue&label=PyPI&style=for-the-badge)
-![Tests](https://github.com/LeparaLaMapara/tfilterpy/actions/workflows/python-tests.yml/badge.svg?style=for-the-badge)
-![Build](https://github.com/LeparaLaMapara/tfilterpy/actions/workflows/publish.yml/badge.svg?style=for-the-badge)
+![PyPI Version](https://img.shields.io/pypi/v/tfilterspy?color=blue&label=PyPI&style=for-the-badge)
+![Tests](https://github.com/LeparaLaMapara/tfilterspy/actions/workflows/python-tests.yml/badge.svg?style=for-the-badge)
+![Build](https://github.com/LeparaLaMapara/tfilterspy/actions/workflows/publish.yml/badge.svg?style=for-the-badge)
 ![License](https://img.shields.io/github/license/LeparaLaMapara/tfilterpy?color=green&style=for-the-badge)
 
-✨ **TFilterPy** is your new favorite Python library for implementing state-of-the-art Bayesian filtering techniques like Kalman Filters and Particle Filters. Whether you're working on noisy linear systems, nonlinear dynamics, or want to sound cool at a party when you say "I coded my own Kalman Filter," this is the library for you!
+✨ **TFiltersPy** is your new favorite Python library for implementing state-of-the-art Bayesian filtering techniques like Kalman Filters and Particle Filters. Whether you're working on noisy linear systems, nonlinear dynamics, or want to sound cool at a party when you say "I coded my own Kalman Filter," this is the library for you!
 
 ---
 
 ## **What’s Inside?** 📦
 
-🎉 **TFilterPy** offers:
+🎉 **TFiltersPy** offers:
 - **Kalman Filters** 🧮 – A classic but still iconic tool for linear filtering and smoothing.
 - **Particle Filters** 🎲 – Sampling-based estimators for nonlinear systems.
 - **Nonlinear Filters** 🔀 – For when your system decides to be complicated.
