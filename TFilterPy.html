@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TFilterPy package &mdash; tfilters 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="TFilterPy.state_estimation package" href="TFilterPy.state_estimation.html" />
+    <link rel="prev" title="TFilterPy" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            tfilters
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">TFilterPy</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">TFilterPy package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html">TFilterPy.state_estimation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.utils.html">TFilterPy.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-TFilterPy.base_estimator">TFilterPy.base_estimator module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#TFilterPy.base_estimator.BaseEstimator"><code class="docutils literal notranslate"><span class="pre">BaseEstimator</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-TFilterPy">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#TFilterPy.DaskKalmanFilter"><code class="docutils literal notranslate"><span class="pre">DaskKalmanFilter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#TFilterPy.DaskNonLinearKalmanFilter"><code class="docutils literal notranslate"><span class="pre">DaskNonLinearKalmanFilter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#TFilterPy.DaskParticleFilter"><code class="docutils literal notranslate"><span class="pre">DaskParticleFilter</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">tfilters</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">TFilterPy</a></li>
+      <li class="breadcrumb-item active">TFilterPy package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/TFilterPy.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tfilterpy-package">
+<h1>TFilterPy package<a class="headerlink" href="#tfilterpy-package" title="Permalink to this heading"></a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="TFilterPy.state_estimation.html">TFilterPy.state_estimation package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TFilterPy.state_estimation.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TFilterPy.state_estimation.html#module-TFilterPy.state_estimation.linear_filters">TFilterPy.state_estimation.linear_filters module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.linear_filters.DaskKalmanFilter"><code class="docutils literal notranslate"><span class="pre">DaskKalmanFilter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.linear_filters.DaskKalmanFilter.estimate_parameters"><code class="docutils literal notranslate"><span class="pre">DaskKalmanFilter.estimate_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.linear_filters.DaskKalmanFilter.fit"><code class="docutils literal notranslate"><span class="pre">DaskKalmanFilter.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.linear_filters.DaskKalmanFilter.predict"><code class="docutils literal notranslate"><span class="pre">DaskKalmanFilter.predict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.linear_filters.DaskKalmanFilter.run_filter"><code class="docutils literal notranslate"><span class="pre">DaskKalmanFilter.run_filter()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="TFilterPy.state_estimation.html#module-TFilterPy.state_estimation.nonlinear_filters">TFilterPy.state_estimation.nonlinear_filters module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.nonlinear_filters.DaskNonLinearKalmanFilter"><code class="docutils literal notranslate"><span class="pre">DaskNonLinearKalmanFilter</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="TFilterPy.state_estimation.html#module-TFilterPy.state_estimation.particle_filters">TFilterPy.state_estimation.particle_filters module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.particle_filters.DaskParticleFilter"><code class="docutils literal notranslate"><span class="pre">DaskParticleFilter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.particle_filters.DaskParticleFilter.estimate_state"><code class="docutils literal notranslate"><span class="pre">DaskParticleFilter.estimate_state()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.particle_filters.DaskParticleFilter.predict"><code class="docutils literal notranslate"><span class="pre">DaskParticleFilter.predict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.particle_filters.DaskParticleFilter.resample"><code class="docutils literal notranslate"><span class="pre">DaskParticleFilter.resample()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.particle_filters.DaskParticleFilter.run_filter"><code class="docutils literal notranslate"><span class="pre">DaskParticleFilter.run_filter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.particle_filters.DaskParticleFilter.step"><code class="docutils literal notranslate"><span class="pre">DaskParticleFilter.step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.particle_filters.DaskParticleFilter.update"><code class="docutils literal notranslate"><span class="pre">DaskParticleFilter.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="TFilterPy.state_estimation.html#module-TFilterPy.state_estimation">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.DaskKalmanFilter"><code class="docutils literal notranslate"><span class="pre">DaskKalmanFilter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.DaskKalmanFilter.estimate_parameters"><code class="docutils literal notranslate"><span class="pre">DaskKalmanFilter.estimate_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.DaskKalmanFilter.fit"><code class="docutils literal notranslate"><span class="pre">DaskKalmanFilter.fit()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.DaskKalmanFilter.predict"><code class="docutils literal notranslate"><span class="pre">DaskKalmanFilter.predict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.DaskKalmanFilter.run_filter"><code class="docutils literal notranslate"><span class="pre">DaskKalmanFilter.run_filter()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.DaskNonLinearKalmanFilter"><code class="docutils literal notranslate"><span class="pre">DaskNonLinearKalmanFilter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.DaskParticleFilter"><code class="docutils literal notranslate"><span class="pre">DaskParticleFilter</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.DaskParticleFilter.estimate_state"><code class="docutils literal notranslate"><span class="pre">DaskParticleFilter.estimate_state()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.DaskParticleFilter.predict"><code class="docutils literal notranslate"><span class="pre">DaskParticleFilter.predict()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.DaskParticleFilter.resample"><code class="docutils literal notranslate"><span class="pre">DaskParticleFilter.resample()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.DaskParticleFilter.run_filter"><code class="docutils literal notranslate"><span class="pre">DaskParticleFilter.run_filter()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.DaskParticleFilter.step"><code class="docutils literal notranslate"><span class="pre">DaskParticleFilter.step()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.DaskParticleFilter.update"><code class="docutils literal notranslate"><span class="pre">DaskParticleFilter.update()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="TFilterPy.utils.html">TFilterPy.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="TFilterPy.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TFilterPy.utils.html#module-TFilterPy.utils.optimisation_utils">TFilterPy.utils.optimisation_utils module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="TFilterPy.utils.html#TFilterPy.utils.optimisation_utils.ParameterEstimator"><code class="docutils literal notranslate"><span class="pre">ParameterEstimator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.utils.html#TFilterPy.utils.optimisation_utils.ParameterEstimator.estimate_parameters"><code class="docutils literal notranslate"><span class="pre">ParameterEstimator.estimate_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.utils.html#TFilterPy.utils.optimisation_utils.ParameterEstimator.estimate_with_adaptive_filtering"><code class="docutils literal notranslate"><span class="pre">ParameterEstimator.estimate_with_adaptive_filtering()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.utils.html#TFilterPy.utils.optimisation_utils.ParameterEstimator.estimate_with_cross_validation"><code class="docutils literal notranslate"><span class="pre">ParameterEstimator.estimate_with_cross_validation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.utils.html#TFilterPy.utils.optimisation_utils.ParameterEstimator.estimate_with_mle"><code class="docutils literal notranslate"><span class="pre">ParameterEstimator.estimate_with_mle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.utils.html#TFilterPy.utils.optimisation_utils.ParameterEstimator.estimate_with_residual_analysis"><code class="docutils literal notranslate"><span class="pre">ParameterEstimator.estimate_with_residual_analysis()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="TFilterPy.utils.html#module-TFilterPy.utils">Module contents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="TFilterPy.utils.html#TFilterPy.utils.ParameterEstimator"><code class="docutils literal notranslate"><span class="pre">ParameterEstimator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.utils.html#TFilterPy.utils.ParameterEstimator.estimate_parameters"><code class="docutils literal notranslate"><span class="pre">ParameterEstimator.estimate_parameters()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.utils.html#TFilterPy.utils.ParameterEstimator.estimate_with_adaptive_filtering"><code class="docutils literal notranslate"><span class="pre">ParameterEstimator.estimate_with_adaptive_filtering()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.utils.html#TFilterPy.utils.ParameterEstimator.estimate_with_cross_validation"><code class="docutils literal notranslate"><span class="pre">ParameterEstimator.estimate_with_cross_validation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.utils.html#TFilterPy.utils.ParameterEstimator.estimate_with_mle"><code class="docutils literal notranslate"><span class="pre">ParameterEstimator.estimate_with_mle()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFilterPy.utils.html#TFilterPy.utils.ParameterEstimator.estimate_with_residual_analysis"><code class="docutils literal notranslate"><span class="pre">ParameterEstimator.estimate_with_residual_analysis()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-TFilterPy.base_estimator">
+<span id="tfilterpy-base-estimator-module"></span><h2>TFilterPy.base_estimator module<a class="headerlink" href="#module-TFilterPy.base_estimator" title="Permalink to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="TFilterPy.base_estimator.BaseEstimator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">TFilterPy.base_estimator.</span></span><span class="sig-name descname"><span class="pre">BaseEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TFilterPy/base_estimator.html#BaseEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.base_estimator.BaseEstimator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Base class for all estimators in the TFilterPy package.
+Provides common functionality such as parameter handling and validation.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="TFilterPy.base_estimator.BaseEstimator.get_params">
+<span class="sig-name descname"><span class="pre">get_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TFilterPy/base_estimator.html#BaseEstimator.get_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.base_estimator.BaseEstimator.get_params" title="Permalink to this definition"></a></dt>
+<dd><p>Get parameters of the estimator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>deep</strong> (<em>bool</em>) – If True, retrieves parameters of nested objects.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A dictionary of parameter names mapped to their values.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TFilterPy.base_estimator.BaseEstimator.set_params">
+<span class="sig-name descname"><span class="pre">set_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TFilterPy/base_estimator.html#BaseEstimator.set_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.base_estimator.BaseEstimator.set_params" title="Permalink to this definition"></a></dt>
+<dd><p>Set parameters of the estimator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>**params</strong> – Arbitrary keyword arguments of parameters to set.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Returns the instance itself.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>self</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TFilterPy.base_estimator.BaseEstimator.to_dask_array">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">to_dask_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">numpy_array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TFilterPy/base_estimator.html#BaseEstimator.to_dask_array"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.base_estimator.BaseEstimator.to_dask_array" title="Permalink to this definition"></a></dt>
+<dd><p>Convert a NumPy array to a Dask array with specified chunking.
+If chunk_size is None, use Dask’s automatic chunking.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>numpy_array</strong> (<em>np.ndarray</em>) – Input array.</p></li>
+<li><p><strong>chunk_size</strong> (<em>int</em><em> or </em><em>tuple</em><em>, </em><em>optional</em>) – Desired chunk size.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dask array version of numpy_array.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>da.Array</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TFilterPy.base_estimator.BaseEstimator.validate_matrices">
+<span class="sig-name descname"><span class="pre">validate_matrices</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">matrices</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TFilterPy/base_estimator.html#BaseEstimator.validate_matrices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.base_estimator.BaseEstimator.validate_matrices" title="Permalink to this definition"></a></dt>
+<dd><p>Validate that matrices have consistent shapes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>matrices</strong> (<em>dict</em>) – A dictionary of matrix names and their values.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the matrices are inconsistent.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-TFilterPy">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-TFilterPy" title="Permalink to this heading"></a></h2>
+<p>TFilterPy: A Python package for state estimation using Kalman Filters, Particle Filters, and Nonlinear Filters.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="TFilterPy.DaskKalmanFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">TFilterPy.</span></span><span class="sig-name descname"><span class="pre">DaskKalmanFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_transition_matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observation_matrix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">process_noise_cov</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observation_noise_cov</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_state</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_covariance</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chunk_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">64</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimation_strategy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'residual_analysis'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TFilterPy/state_estimation/linear_filters.html#DaskKalmanFilter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.DaskKalmanFilter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="TFilterPy.utils.html#TFilterPy.utils.optimisation_utils.ParameterEstimator" title="TFilterPy.utils.optimisation_utils.ParameterEstimator"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParameterEstimator</span></code></a></p>
+<p>Dask-based implementation of a Kalman Filter that supports distributed computing for
+large datasets. This class extends the ParameterEstimator to estimate the process
+noise covariance (Q) and observation noise covariance (R) while applying Kalman Filtering
+on incoming measurements.</p>
+<p>The Kalman Filter is a recursive algorithm that estimates the state of a linear dynamic
+system from noisy measurements. This implementation leverages Dask to scale computations
+across distributed systems.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>state_transition_matrix</strong> (<em>np.ndarray</em><em> or </em><em>da.Array</em><em>, </em><em>shape</em><em> (</em><em>n_features</em><em>, </em><em>n_features</em><em>)</em>) – The state transition matrix (F) representing how the system evolves between states.</p></li>
+<li><p><strong>observation_matrix</strong> (<em>np.ndarray</em><em> or </em><em>da.Array</em><em>, </em><em>shape</em><em> (</em><em>n_observations</em><em>, </em><em>n_features</em><em>)</em>) – The observation matrix (H) that maps the true state space into the observed space.</p></li>
+<li><p><strong>process_noise_cov</strong> (<em>np.ndarray</em><em> or </em><em>da.Array</em><em>, </em><em>shape</em><em> (</em><em>n_features</em><em>, </em><em>n_features</em><em>)</em>) – Covariance matrix (Q) representing the process noise.</p></li>
+<li><p><strong>observation_noise_cov</strong> (<em>np.ndarray</em><em> or </em><em>da.Array</em><em>, </em><em>shape</em><em> (</em><em>n_observations</em><em>, </em><em>n_observations</em><em>)</em>) – Covariance matrix (R) representing the observation noise.</p></li>
+<li><p><strong>initial_state</strong> (<em>np.ndarray</em><em> or </em><em>da.Array</em><em>, </em><em>shape</em><em> (</em><em>n_features</em><em>,</em><em>)</em>) – Initial state vector (x0) of the system.</p></li>
+<li><p><strong>initial_covariance</strong> (<em>np.ndarray</em><em> or </em><em>da.Array</em><em>, </em><em>shape</em><em> (</em><em>n_features</em><em>, </em><em>n_features</em><em>)</em>) – Initial state covariance matrix (P0), representing initial uncertainty in the state.</p></li>
+<li><p><strong>estimation_strategy</strong> (<em>str</em><em>, </em><em>optional</em><em>, </em><em>default=&quot;residual_analysis&quot;</em>) – The strategy for estimating Q and R. Can be one of:
+- “residual_analysis”
+- “mle”
+- “cross_validation”
+- “adaptive_filtering”</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If matrix dimensions do not conform to Kalman Filter requirements.</p>
+</dd>
+</dl>
+<p class="rubric">References</p>
+<p>Welch, G., &amp; Bishop, G. (1995). An Introduction to the Kalman Filter.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="TFilterPy.DaskKalmanFilter.estimate_parameters">
+<span class="sig-name descname"><span class="pre">estimate_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Array</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="reference internal" href="_modules/TFilterPy/state_estimation/linear_filters.html#DaskKalmanFilter.estimate_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.DaskKalmanFilter.estimate_parameters" title="Permalink to this definition"></a></dt>
+<dd><p>Estimate process (Q) and observation (R) noise covariances using the specified strategy.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>measurements</strong> (<em>da.Array</em><em>, </em><em>shape</em><em> (</em><em>n_timesteps</em><em>, </em><em>n_observations</em><em>)</em>) – Observed measurements over time.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>Q</strong> (<em>da.Array, shape (n_features, n_features)</em>) – Estimated process noise covariance matrix.</p></li>
+<li><p><strong>R</strong> (<em>da.Array, shape (n_features, n_features)</em>) – Estimated observation noise covariance matrix.</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>This method calls the appropriate estimation strategy from the parent class.</p></li>
+<li><p>The available strategies include residual analysis, MLE, cross-validation,
+and adaptive filtering.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TFilterPy.DaskKalmanFilter.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">X</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Array</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="TFilterPy.state_estimation.html#TFilterPy.state_estimation.linear_filters.DaskKalmanFilter" title="TFilterPy.state_estimation.linear_filters.DaskKalmanFilter"><span class="pre">DaskKalmanFilter</span></a></span></span><a class="reference internal" href="_modules/TFilterPy/state_estimation/linear_filters.html#DaskKalmanFilter.fit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.DaskKalmanFilter.fit" title="Permalink to this definition"></a></dt>
+<dd><p>Prepare the Kalman Filter by storing the measurements as a Dask array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>X</strong> (<em>np.ndarray</em><em> or </em><em>da.Array</em><em>, </em><em>shape</em><em> (</em><em>n_timesteps</em><em>, </em><em>n_observations</em><em>)</em>) – Array of measurements over time.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>self</strong> – The fitted Kalman Filter instance.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#TFilterPy.DaskKalmanFilter" title="TFilterPy.DaskKalmanFilter">DaskKalmanFilter</a></p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If the input measurements are not 2-dimensional.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TFilterPy.DaskKalmanFilter.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Array</span></span></span><a class="reference internal" href="_modules/TFilterPy/state_estimation/linear_filters.html#DaskKalmanFilter.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.DaskKalmanFilter.predict" title="Permalink to this definition"></a></dt>
+<dd><p>Perform state estimation over all time steps using the Kalman Filter algorithm.</p>
+<p>This method constructs a Dask computation graph to process the entire measurement
+sequence in parallel using delayed execution.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>state_estimates</strong> – The estimated state at each time step.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>da.Array, shape (n_timesteps, n_features)</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>The Kalman Filter operates in two steps: prediction and update.</p></li>
+<li><p>Predictions are made using the state transition matrix F.</p></li>
+<li><p>Updates are performed using the observation matrix H and Kalman Gain K.</p></li>
+<li><p>This method leverages Dask to parallelize the filter process over multiple time steps.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TFilterPy.DaskKalmanFilter.run_filter">
+<span class="sig-name descname"><span class="pre">run_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Array</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="reference internal" href="_modules/TFilterPy/state_estimation/linear_filters.html#DaskKalmanFilter.run_filter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.DaskKalmanFilter.run_filter" title="Permalink to this definition"></a></dt>
+<dd><p>Apply the Kalman Filter on measurements to compute state estimates and residuals.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>measurements</strong> (<em>da.Array</em><em>, </em><em>shape</em><em> (</em><em>n_timesteps</em><em>, </em><em>n_observations</em><em>)</em>) – Observed measurements over time.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>state_estimates</strong> (<em>da.Array, shape (n_timesteps, n_features)</em>) – Estimated states over the measurement timeline.</p></li>
+<li><p><strong>residuals</strong> (<em>da.Array, shape (n_timesteps, n_observations)</em>) – Difference between observed and predicted measurements (innovations).</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<ul class="simple">
+<li><p>This function is used by parameter estimation strategies to compute residuals.</p></li>
+<li><p>Residuals are used for adaptive filtering and cross-validation strategies.</p></li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="TFilterPy.DaskNonLinearKalmanFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">TFilterPy.</span></span><span class="sig-name descname"><span class="pre">DaskNonLinearKalmanFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimation_strategy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'residual_analysis'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TFilterPy/state_estimation/nonlinear_filters.html#DaskNonLinearKalmanFilter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.DaskNonLinearKalmanFilter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="TFilterPy.utils.html#TFilterPy.utils.optimisation_utils.ParameterEstimator" title="TFilterPy.utils.optimisation_utils.ParameterEstimator"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParameterEstimator</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="TFilterPy.DaskParticleFilter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">TFilterPy.</span></span><span class="sig-name descname"><span class="pre">DaskParticleFilter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state_transition</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observation_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">process_noise_cov</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">observation_noise_cov</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_state</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_particles</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_dask</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">estimation_strategy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'residual_analysis'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TFilterPy/state_estimation/particle_filters.html#DaskParticleFilter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.DaskParticleFilter" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="TFilterPy.utils.html#TFilterPy.utils.optimisation_utils.ParameterEstimator" title="TFilterPy.utils.optimisation_utils.ParameterEstimator"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParameterEstimator</span></code></a></p>
+<p>A multivariate, scalable particle filter using Dask. Inherits parameter estimation
+methods from ParameterEstimator.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="TFilterPy.DaskParticleFilter.estimate_state">
+<span class="sig-name descname"><span class="pre">estimate_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/TFilterPy/state_estimation/particle_filters.html#DaskParticleFilter.estimate_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.DaskParticleFilter.estimate_state" title="Permalink to this definition"></a></dt>
+<dd><p>Step 5: State Estimation. Compute the state estimate as the weighted average of particles.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TFilterPy.DaskParticleFilter.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/TFilterPy/state_estimation/particle_filters.html#DaskParticleFilter.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.DaskParticleFilter.predict" title="Permalink to this definition"></a></dt>
+<dd><p>Step 2: Prediction. Propagate each particle using the state transition model plus
+Gaussian process noise.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TFilterPy.DaskParticleFilter.resample">
+<span class="sig-name descname"><span class="pre">resample</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/TFilterPy/state_estimation/particle_filters.html#DaskParticleFilter.resample"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.DaskParticleFilter.resample" title="Permalink to this definition"></a></dt>
+<dd><p>Step 4: Resampling. Multinomial resampling to refocus on high-probability particles.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TFilterPy.DaskParticleFilter.run_filter">
+<span class="sig-name descname"><span class="pre">run_filter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurements</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TFilterPy/state_estimation/particle_filters.html#DaskParticleFilter.run_filter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.DaskParticleFilter.run_filter" title="Permalink to this definition"></a></dt>
+<dd><p>This method is required for parameter estimation routines. It should run the filter
+over a sequence of measurements and return both the state estimates and the residuals.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>measurements</strong> (<em>da.Array</em>) – Array of measurements over time, shape (n_timesteps, n_obs).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Filtered state estimates, shape (n_timesteps, n_state).
+residuals (da.Array): Residuals (measurement - predicted_measurement), same shape as measurements.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>state_estimates (da.Array)</p>
+</dd>
+</dl>
+<p>For this simple example, we run the filter sequentially over the measurements.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TFilterPy.DaskParticleFilter.step">
+<span class="sig-name descname"><span class="pre">step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurement</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TFilterPy/state_estimation/particle_filters.html#DaskParticleFilter.step"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.DaskParticleFilter.step" title="Permalink to this definition"></a></dt>
+<dd><p>Step 6: Iteration. Run one full filter cycle: predict, update, resample, and state estimation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>measurement</strong> (<em>np.ndarray</em>) – The observed measurement.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The estimated state.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>np.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="TFilterPy.DaskParticleFilter.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurement</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/TFilterPy/state_estimation/particle_filters.html#DaskParticleFilter.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#TFilterPy.DaskParticleFilter.update" title="Permalink to this definition"></a></dt>
+<dd><p>Step 3: Measurement Update. Update particle weights based on the likelihood
+of the observed measurement.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>measurement</strong> (<em>np.ndarray</em>) – The observed measurement.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="TFilterPy" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="TFilterPy.state_estimation.html" class="btn btn-neutral float-right" title="TFilterPy.state_estimation package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Thabang Mashinin-Sekhoto, Lebogang Mashinini-Sekhoto, Palesa Mashinini-Sekhoto.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
