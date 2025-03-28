@@ -3,7 +3,7 @@ requires = ["setuptools>=42", "wheel", "setuptools_scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tfilterpy"
+name = "tfilterspy"
 dynamic = ["version"]
 description = "A Python package for state estimation using Kalman and Particle Filters"
 authors = [
@@ -29,6 +29,6 @@ where = ["."]
 include = ["TFilterPy*"]
 
 [project.urls]
-Homepage = "https://github.com/LeparaLaMapara/tfilterpy"
-Documentation = "https://github.com/LeparaLaMapara/tfilterpy/docs"
-Repository = "https://github.com/LeparaLaMapara/tfilterpy"
+Homepage = "https://github.com/MaSHt01/tfilterspy"
+Documentation = "https://github.com/MaSHt01/tfilterspy/docs"
+Repository = "https://github.com/MaSHt01/tfilterspy"

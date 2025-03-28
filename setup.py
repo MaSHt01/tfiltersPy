@@ -12,12 +12,12 @@ setup(
     description="A Python package for Bayesian filtering models such as Kalman and Particle Filters.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://leparalamapara.github.io/tfilterpy/",
+    url="https://leparalamapara.github.io/tfilterspy/",
     project_urls={
-        "Documentation": "https://leparalamapara.github.io/tfilterspy/",
-        "Source": "https://github.com/LeparaLaMapara/tfilterspy",
-        "Tracker": "https://github.com/LeparaLaMapara/tfilterspy/issues",
-        "Logo": "https://raw.githubusercontent.com/LeparaLaMapara/tfilterspy/main/branding/logo/tfilters-logo.jpeg",
+        "Documentation": "https://MaSHt01.github.io/tfilterspy/",
+        "Source": "https://github.com/MaSHt01/tfilterspy",
+        "Tracker": "https://github.com/MaSHt01/tfilterspy/issues",
+        "Logo": "https://raw.githubusercontent.com/MaSHt01/tfilterspy/main/branding/logo/tfilters-logo.jpeg",
     },
     packages=find_packages(),
     install_requires=[
