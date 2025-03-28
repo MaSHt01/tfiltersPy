@@ -5,7 +5,7 @@ on:
     branches:
       - main
 
-      
+
 jobs:
   docs:
     runs-on: ubuntu-latest
@@ -23,7 +23,9 @@ jobs:
           python -m pip install --upgrade pip
           # Optionally, pin specific versions for reproducibility
           pip install sphinx==6.2.1 sphinx-rtd-theme==1.2.0 sphinx-autodoc-typehints==1.15.0
+          pip install nbsphinx
           pip install -e .
+
           
       - name: Build Docs
         run: |
@@ -33,6 +35,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./docs/build
           keep_files: false
