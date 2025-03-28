@@ -8,12 +8,12 @@
    :align: center
 
 
-Welcome to **tfilterpy**'s documentation!
+Welcome to **tfilterspy**'s documentation!
 -----------------------------------------
 
 
 
-**tfilterpy** is a Python package for state estimation using Bayesian filtering techniques such as Kalman and Particle Filters.
+**tfilterspy** is a Python package for state estimation using Bayesian filtering techniques such as Kalman and Particle Filters.
 It supports distributed computing with Dask, allowing you to process large datasets efficiently.
 
 Features
@@ -25,7 +25,7 @@ Features
 
 Quick Start
 -----------
-For a quick introduction on how to get started with **tfilterpy**, check out the :ref:`quickstart` guide.
+For a quick introduction on how to get started with **tfilterspy**, check out the :ref:`quickstart` guide.
 
 .. toctree::
    :maxdepth: 2
@@ -39,7 +39,7 @@ For a quick introduction on how to get started with **tfilterpy**, check out the
 
 Examples
 --------
-See the `examples <https://github.com/LeparaLaMapara/tfilterpy/tree/main/examples>`_ directory for real-world use cases and Jupyter notebooks.
+See the `examples <https://github.com/LeparaLaMapara/tfilterspy/tree/main/examples>`_ directory for real-world use cases and Jupyter notebooks.
 
 Additional Resources
 --------------------

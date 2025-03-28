@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="tfilterpy",
+    name="tfilterspy",
     use_scm_version=True,
     setup_requires=["setuptools_scm"],
     author="Thabang L. Mashinini-Sekgoto",
@@ -14,10 +14,10 @@ setup(
     long_description_content_type="text/markdown",
     url="https://leparalamapara.github.io/tfilterpy/",
     project_urls={
-        "Documentation": "https://leparalamapara.github.io/tfilterpy/",
-        "Source": "https://github.com/LeparaLaMapara/tfilterpy",
-        "Tracker": "https://github.com/LeparaLaMapara/tfilterpy/issues",
-        "Logo": "https://raw.githubusercontent.com/LeparaLaMapara/tfilterpy/main/branding/logo/tfilters-logo.jpeg",
+        "Documentation": "https://leparalamapara.github.io/tfilterspy/",
+        "Source": "https://github.com/LeparaLaMapara/tfilterspy",
+        "Tracker": "https://github.com/LeparaLaMapara/tfilterspy/issues",
+        "Logo": "https://raw.githubusercontent.com/LeparaLaMapara/tfilterspy/main/branding/logo/tfilters-logo.jpeg",
     },
     packages=find_packages(),
     install_requires=[

@@ -7,16 +7,16 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   TFilterPy.state_estimation
-   TFilterPy.utils
+   TFiltersPy.state_estimation
+   TFiltersPy.utils
 
 Submodules
 ----------
 
-TFilterPy.base\_estimator module
+TFiltersPy.base\_estimator module
 --------------------------------
 
-.. automodule:: TFilterPy.base_estimator
+.. automodule:: TFiltersPy.base_estimator
    :members:
    :undoc-members:
    :show-inheritance:
@@ -24,7 +24,7 @@ TFilterPy.base\_estimator module
 Module contents
 ---------------
 
-.. automodule:: TFilterPy
+.. automodule:: TFiltersPy
    :members:
    :undoc-members:
    :show-inheritance:
