@@ -5,4 +5,4 @@ Examples
    :maxdepth: 2
    :caption: Notebook Examples
 
-   tfilterPy/examples/*.ipynb
+   tfilterPy/examples/notebooks/*.ipynb
