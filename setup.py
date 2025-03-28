@@ -5,8 +5,6 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="tfilterpy",
-    # Remove the explicit version and let setuptools_scm derive it:
-    # version="1.0.0",
     use_scm_version=True,
     setup_requires=["setuptools_scm"],
     author="Thabang L. Mashinini-Sekgoto",
@@ -23,13 +21,12 @@ setup(
     },
     packages=find_packages(),
     install_requires=[
-        "numpy>=1.21",
         "dask>=2024.8.0",
     ],
     extras_require={
         "dev": ["pytest", "sphinx"],
     },
-    keywords="kalman filter, particle filter, Bayesian filtering, distributed computing, Dask, UAIE, Ubunye-AI-Ecosystems"
+    keywords="kalman filter, particle filter, Bayesian filtering, distributed computing, Dask, UAIE, Ubunye-AI-Ecosystems",
     python_requires=">=3.8",
     classifiers=[
         "Programming Language :: Python :: 3",
