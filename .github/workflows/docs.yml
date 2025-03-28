@@ -25,7 +25,6 @@ jobs:
           pip install sphinx==6.2.1 sphinx-rtd-theme==1.2.0 sphinx-autodoc-typehints==1.15.0
           pip install nbsphinx
           pip install -e .
-
           
       - name: Build Docs
         run: |
