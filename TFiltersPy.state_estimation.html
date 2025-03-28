@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TFilterPy &mdash; tfilters 1.0.0 documentation</title>
+  <title>TFiltersPy.state_estimation package &mdash; tfilters 1.0.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="TFilterPy package" href="TFiltersPy.html" />
-    <link rel="prev" title="Notebook Examples" href="quickstart.html" /> 
+    <link rel="next" title="TFiltersPy.utils package" href="TFiltersPy.utils.html" />
+    <link rel="prev" title="TFilterPy package" href="TFiltersPy.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,8 +44,18 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Notebook Examples</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">TFilterPy</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="TFiltersPy.html">TFilterPy package</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">TFilterPy</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="TFiltersPy.html">TFilterPy package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="TFiltersPy.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">TFiltersPy.state_estimation package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.utils.html">TFiltersPy.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="TFiltersPy.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TFiltersPy.html#tfilterspy-base-estimator-module">TFiltersPy.base_estimator module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TFiltersPy.html#module-contents">Module contents</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -64,9 +74,11 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">TFilterPy</li>
+          <li class="breadcrumb-item"><a href="modules.html">TFilterPy</a></li>
+          <li class="breadcrumb-item"><a href="TFiltersPy.html">TFilterPy package</a></li>
+      <li class="breadcrumb-item active">TFiltersPy.state_estimation package</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/modules.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/TFiltersPy.state_estimation.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -74,43 +86,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="tfilterpy">
-<h1>TFilterPy<a class="headerlink" href="#tfilterpy" title="Permalink to this heading"></a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="TFiltersPy.html">TFilterPy package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="TFiltersPy.html#subpackages">Subpackages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="TFiltersPy.state_estimation.html">TFiltersPy.state_estimation package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.state_estimation.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.state_estimation.html#tfilterspy-state-estimation-linear-filters-module">TFiltersPy.state_estimation.linear_filters module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.state_estimation.html#tfilterspy-state-estimation-nonlinear-filters-module">TFiltersPy.state_estimation.nonlinear_filters module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.state_estimation.html#tfilterspy-state-estimation-particle-filters-module">TFiltersPy.state_estimation.particle_filters module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.state_estimation.html#module-contents">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="TFiltersPy.utils.html">TFiltersPy.utils package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.utils.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.utils.html#tfilterspy-utils-optimisation-utils-module">TFiltersPy.utils.optimisation_utils module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.utils.html#module-contents">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="TFiltersPy.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TFiltersPy.html#tfilterspy-base-estimator-module">TFiltersPy.base_estimator module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TFiltersPy.html#module-contents">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</div>
+  <section id="tfilterspy-state-estimation-package">
+<h1>TFiltersPy.state_estimation package<a class="headerlink" href="#tfilterspy-state-estimation-package" title="Permalink to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+</section>
+<section id="tfilterspy-state-estimation-linear-filters-module">
+<h2>TFiltersPy.state_estimation.linear_filters module<a class="headerlink" href="#tfilterspy-state-estimation-linear-filters-module" title="Permalink to this heading"></a></h2>
+</section>
+<section id="tfilterspy-state-estimation-nonlinear-filters-module">
+<h2>TFiltersPy.state_estimation.nonlinear_filters module<a class="headerlink" href="#tfilterspy-state-estimation-nonlinear-filters-module" title="Permalink to this heading"></a></h2>
+</section>
+<section id="tfilterspy-state-estimation-particle-filters-module">
+<h2>TFiltersPy.state_estimation.particle_filters module<a class="headerlink" href="#tfilterspy-state-estimation-particle-filters-module" title="Permalink to this heading"></a></h2>
+</section>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="quickstart.html" class="btn btn-neutral float-left" title="Notebook Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="TFiltersPy.html" class="btn btn-neutral float-right" title="TFilterPy package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="TFiltersPy.html" class="btn btn-neutral float-left" title="TFilterPy package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="TFiltersPy.utils.html" class="btn btn-neutral float-right" title="TFiltersPy.utils package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

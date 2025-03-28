@@ -1,13 +1,13 @@
-TFilterPy.utils package
+TFiltersPy.utils package
 =======================
 
 Submodules
 ----------
 
-TFilterPy.utils.optimisation\_utils module
+TFiltersPy.utils.optimisation\_utils module
 ------------------------------------------
 
-.. automodule:: TFilterPy.utils.optimisation_utils
+.. automodule:: TFiltersPy.utils.optimisation_utils
    :members:
    :undoc-members:
    :show-inheritance:
@@ -15,7 +15,7 @@ TFilterPy.utils.optimisation\_utils module
 Module contents
 ---------------
 
-.. automodule:: TFilterPy.utils
+.. automodule:: TFiltersPy.utils
    :members:
    :undoc-members:
    :show-inheritance:
