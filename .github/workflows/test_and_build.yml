@@ -39,6 +39,6 @@ jobs:
       - name: Publish to PyPI
         if: github.ref_type == 'tag'  # Only publish on tag builds
         env:
-          TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
-          TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: REALTHABANGLUKHETHO_PYPI_API_TOKEN
         run: python -m twine upload dist/*
