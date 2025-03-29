@@ -5,9 +5,13 @@
 # **TFiltersPy** 🌀
 
 ![PyPI Version](https://img.shields.io/pypi/v/tfilterspy?color=blue&label=PyPI&style=for-the-badge)
-![Tests](https://github.com/LeparaLaMapara/tfilterspy/actions/workflows/python-tests.yml/badge.svg?style=for-the-badge)
-![Build](https://github.com/LeparaLaMapara/tfilterspy/actions/workflows/publish.yml/badge.svg?style=for-the-badge)
-![License](https://img.shields.io/github/license/LeparaLaMapara/tfilterpy?color=green&style=for-the-badge)
+![Codecov](https://img.shields.io/codecov/c/github/MaSHt01/tfilterspy?style=for-the-badge)
+![Build](https://github.com/MaSHt01/tfilterspy/actions/workflows/build_PYPIP.yml/badge.svg?style=for-the-badge)
+![PyPI Downloads](https://img.shields.io/pypi/dm/tfilterspy?style=for-the-badge)
+![Docs](https://img.shields.io/badge/docs-online-brightgreen?style=for-the-badge)
+![Python Versions](https://img.shields.io/pypi/pyversions/tfilterspy?style=for-the-badge)
+![GitHub Stars](https://img.shields.io/github/stars/MaSHt01/tfilterspy?style=for-the-badge&logo=github)
+![License](https://img.shields.io/github/license/MaSHt01/tfilterspy?color=green&style=for-the-badge)
 
 ✨ **TFiltersPy** is your new favorite Python library for implementing state-of-the-art Bayesian filtering techniques like Kalman Filters and Particle Filters. Whether you're working on noisy linear systems, nonlinear dynamics, or want to sound cool at a party when you say "I coded my own Kalman Filter," this is the library for you!
 
@@ -28,14 +32,14 @@
 Getting started is as easy as pie (or Pi)! 🍰
 
 ```bash
-pip install tfilterpy
+pip install tfilterspy
 ```
 
 Want to contribute or tinker with the code? Clone the repo and install the development dependencies:
 
 ```bash
-git clone https://github.com/LeparaLaMapara/tfilterpy.git
-cd tfilterpy
+git clone https://github.com/MaSHt01/tfilterspy.git
+cd tfilterspy
 pip install .[dev]
 ```
 ___________________________________________
@@ -45,7 +49,7 @@ Example 1: Using a Kalman Filter to tame noisy data 🤖
 
 ```python
 import numpy as np
-from TFilterPy.state_estimation.linear_filters import DaskKalmanFilter
+from TFiltersPy.state_estimation.linear_filters import DaskKalmanFilter
 
 # Define your system
 F = np.eye(2)
@@ -76,7 +80,7 @@ _____________________
   - Designed for both linear and nonlinear systems 🔄
 
 ___________________________________
-# Why TFilterPy? 💡
+# Why TFiltersPy? 💡
 
 Because Kalman deserves better branding! Instead of grappling with matrices and equations from scratch, use TFilterPy and focus on the fun part: tweaking models until they (hopefully) work. 🎉
 ______________________________
@@ -116,7 +120,7 @@ ________________
 
 ## Documentation 📚
 
-Detailed documentation is available at: https://leparalamapara.github.io/tfilterpy
+Detailed documentation is available at: https://MaSHt01.github.io/tfilterspy
 (Yes, we made it look fancy. You're welcome. ✨)
 _____________________
 
