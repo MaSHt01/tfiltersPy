@@ -8,7 +8,7 @@
    :align: center
 
 
-Welcome to tfilterspy documentation – where we say "Sawubona, Molo, Hallo, Dumela, Ndaa, Xewani, and a Dinstang in Sipitori style!" and filter data like true South African rockstars!
+## Welcome to tfilterspy documentation – where we say "Sawubona, Molo, Hallo, Dumela, Ndaa, Xewani, and a Dinstang in Sipitori style!" and filter data like true South African rockstars!
 -----------------------------------------
 
 
