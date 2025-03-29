@@ -18,7 +18,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="TFilterPy package" href="TFiltersPy.html" />
+    <link rel="next" title="Real World Use Cases🎢" href="examples_index.html" />
     <link rel="prev" title="Welcome to tfilterspy documentation – where we say “Sawubona, Molo, Hallo, Dumela, Ndaa, Xewani, and a Dinstang in Sipitori style!” and filter data like true South African rockstars!" href="index.html" /> 
 </head>
 
@@ -47,10 +47,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#key-classes">Key Classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#detailed-documentation">Detailed Documentation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="#tfilterspy-classes">TFiltersPy Classes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="TFiltersPy.html">TFilterPy package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#additional-notes">Additional Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#indices-and-tables">Indices and Tables</a></li>
 </ul>
@@ -84,12 +80,12 @@
              
   <section id="api-reference">
 <h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this heading"></a></h1>
-<p>Welcome to the <strong>TFiltersPy</strong> API Reference – where filtering gets fun! 🎉 Just like scikit‑learn, we’ve kept our API intuitive, so you can focus on crunching numbers and filtering noise without all the boring bits. 😎</p>
+<p>Welcome to the <strong>TFiltersPy</strong> API Reference - where filtering gets fun! 🎉 Just like scikit-learn, we’ve kept our API intuitive, so you can focus on crunching numbers and filtering noise without all the boring bits. 😎</p>
 <section id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
 <p><strong>TFiltersPy</strong> is here to help you tame unruly data with a range of filtering algorithms. Whether you’re a wizard of linear systems 🧙‍♂️ or a champion of nonlinear chaos 🤹‍♀️, our filters are designed to be as straightforward (and fun) as possible.</p>
 <p>Key Concepts:
-- <strong>fit()</strong>: Initialize or train your filter – think of it as setting up your filtering magic ✨.
+- <strong>fit()</strong>: Initialize or train your filter - think of it as setting up your filtering magic ✨.
 - <strong>predict()</strong>: Wave your wand and generate state estimates from new measurements 🪄.
 - <strong>run_filter()</strong>: Process a sequence of measurements for a full filtering extravaganza 🎢.
 - <strong>estimate_parameters()</strong>: Let the filter automatically figure out optimal settings (because who wants to do that manually? 🤷‍♂️).</p>
@@ -100,47 +96,17 @@
 <li><p><strong>BaseEstimator</strong>
 The foundation of our filtering magic. It handles parameter management, validation, and even some neat utility tricks like converting NumPy arrays to Dask arrays. 🔧</p></li>
 <li><p><strong>ParameterEstimator</strong>
-A bit more advanced – it adds methods for Bayesian parameter estimation using fun strategies like residual analysis, maximum likelihood, cross-validation, and adaptive filtering. 🎯</p></li>
+A bit more advanced - it adds methods for Bayesian parameter estimation using fun strategies like residual analysis, maximum likelihood, cross-validation, and adaptive filtering. 🎯</p></li>
 <li><p><strong>DaskKalmanFilter</strong>
 Our distributed wizard for linear state estimation, leveraging Dask to handle massive data sets with ease. It’s as efficient as it is elegant. 🚀</p></li>
 <li><p><strong>ParticleFilter</strong>
-For when your system is too wild for a Kalman filter, our Particle Filter uses a swarm of particles to track nonlinear, non-Gaussian systems. It’s like herding cats – but with probabilities! 🐱🎲</p></li>
+For when your system is too wild for a Kalman filter, our Particle Filter uses a swarm of particles to track nonlinear, non-Gaussian systems. It’s like herding cats - but with probabilities! 🐱🎲</p></li>
 </ul>
 </section>
 <section id="detailed-documentation">
 <h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this heading"></a></h2>
 <p>For the nitty-gritty details of each class and method, check out the module docs below:</p>
 </section>
-</section>
-<section id="tfilterspy-classes">
-<h1>TFiltersPy Classes<a class="headerlink" href="#tfilterspy-classes" title="Permalink to this heading"></a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="TFiltersPy.html">TFilterPy package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="TFiltersPy.html#subpackages">Subpackages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="TFiltersPy.state_estimation.html">TFiltersPy.state_estimation package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.state_estimation.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.state_estimation.html#tfilterspy-state-estimation-linear-filters-module">TFiltersPy.state_estimation.linear_filters module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.state_estimation.html#tfilterspy-state-estimation-nonlinear-filters-module">TFiltersPy.state_estimation.nonlinear_filters module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.state_estimation.html#tfilterspy-state-estimation-particle-filters-module">TFiltersPy.state_estimation.particle_filters module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.state_estimation.html#module-contents">Module contents</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="TFiltersPy.utils.html">TFiltersPy.utils package</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.utils.html#submodules">Submodules</a></li>
-<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.utils.html#tfilterspy-utils-optimisation-utils-module">TFiltersPy.utils.optimisation_utils module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="TFiltersPy.utils.html#module-contents">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="TFiltersPy.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TFiltersPy.html#tfilterspy-base-estimator-module">TFiltersPy.base_estimator module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="TFiltersPy.html#module-contents">Module contents</a></li>
-</ul>
-</li>
-</ul>
-</div>
 <section id="additional-notes">
 <h2>Additional Notes<a class="headerlink" href="#additional-notes" title="Permalink to this heading"></a></h2>
 <p>We designed <strong>TFiltersPy</strong> to be:
@@ -163,7 +129,7 @@ For when your system is too wild for a Kalman filter, our Particle Filter uses a
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="index.html" class="btn btn-neutral float-left" title="Welcome to tfilterspy documentation – where we say “Sawubona, Molo, Hallo, Dumela, Ndaa, Xewani, and a Dinstang in Sipitori style!” and filter data like true South African rockstars!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="TFiltersPy.html" class="btn btn-neutral float-right" title="TFilterPy package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="examples_index.html" class="btn btn-neutral float-right" title="Real World Use Cases🎢" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
