@@ -59,6 +59,6 @@ See the `examples <https://github.com/LeparaLaMapara/tfilterspy/tree/main/exampl
 Additional Resources
 --------------------
 - `API Reference <genindex.html>`_
-- `Module Index <modindex.html>`_
+- `Module Index <modulues.html>`_
 - `Search <search.html>`_
 
