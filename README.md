@@ -5,11 +5,11 @@
 # **TFiltersPy** 🌀
 
 ![PyPI Version](https://img.shields.io/pypi/v/tfilterspy?color=blue&label=PyPI&style=for-the-badge)
-![Codecov](https://img.shields.io/codecov/c/github/MaSHt01/tfilterspy?style=for-the-badge)
+<!-- ![Codecov](https://img.shields.io/codecov/c/github/MaSHt01/tfilterspy?style=for-the-badge) -->
 ![Build](https://github.com/MaSHt01/tfilterspy/actions/workflows/build_PYPIP.yml/badge.svg?style=for-the-badge)
 ![PyPI Downloads](https://img.shields.io/pypi/dm/tfilterspy?style=for-the-badge)
 ![Docs](https://img.shields.io/badge/docs-online-brightgreen?style=for-the-badge)
-![Python Versions](https://img.shields.io/pypi/pyversions/tfilterspy?style=for-the-badge)
+<!-- ![Python Versions](https://img.shields.io/pypi/pyversions/tfilterspy?style=for-the-badge) -->
 ![GitHub Stars](https://img.shields.io/github/stars/MaSHt01/tfilterspy?style=for-the-badge&logo=github)
 ![License](https://img.shields.io/github/license/MaSHt01/tfilterspy?color=green&style=for-the-badge)
 
