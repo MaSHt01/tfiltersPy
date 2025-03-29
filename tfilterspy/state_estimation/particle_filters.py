@@ -1,6 +1,6 @@
 import numpy as np
 import dask.array as da
-from TFiltersPy.utils.optimisation_utils import ParameterEstimator
+from tfilterspy.utils.optimisation_utils import ParameterEstimator
 
 class DaskParticleFilter(ParameterEstimator):
     """

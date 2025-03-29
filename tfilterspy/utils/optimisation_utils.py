@@ -1,7 +1,7 @@
 import numpy as np
 import dask.array as da
 
-from TFiltersPy.base_estimator import BaseEstimator
+from tfilterspy.base_estimator import BaseEstimator
 
 
 

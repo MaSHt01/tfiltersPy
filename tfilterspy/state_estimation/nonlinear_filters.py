@@ -1,4 +1,4 @@
-from TFilterPy.utils.optimisation_utils import ParameterEstimator
+from tfilterspy.utils.optimisation_utils import ParameterEstimator
 
 
 class DaskNonLinearKalmanFilter(ParameterEstimator):
