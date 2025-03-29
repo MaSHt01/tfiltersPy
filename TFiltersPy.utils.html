@@ -76,9 +76,102 @@
 </section>
 <section id="tfilterspy-utils-optimisation-utils-module">
 <h2>tfilterspy.utils.optimisation_utils module<a class="headerlink" href="#tfilterspy-utils-optimisation-utils-module" title="Permalink to this heading"></a></h2>
+<span class="target" id="module-tfilterspy.utils.optimisation_utils"></span><dl class="py class">
+<dt class="sig sig-object py" id="tfilterspy.utils.optimisation_utils.ParameterEstimator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tfilterspy.utils.optimisation_utils.</span></span><span class="sig-name descname"><span class="pre">ParameterEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimation_strategy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'residual_analysis'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tfilterspy/utils/optimisation_utils.html#ParameterEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tfilterspy.utils.optimisation_utils.ParameterEstimator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="TFiltersPy.html#tfilterspy.base_estimator.BaseEstimator" title="tfilterspy.base_estimator.BaseEstimator"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEstimator</span></code></a></p>
+<p>A class for estimating Kalman Filter parameters, such as process noise covariance (Q)
+and observation noise covariance (R), using different estimation methods.</p>
+<p>Estimation strategies include:
+- Residual Analysis
+- Maximum Likelihood Estimation (MLE)
+- Cross-Validation
+- Adaptive Filtering</p>
+<p>References:
+- Welch, G., &amp; Bishop, G. (1995). An Introduction to the Kalman Filter.
+- Haykin, S. (2001). Kalman Filtering and Neural Networks.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tfilterspy.utils.optimisation_utils.ParameterEstimator.estimate_parameters">
+<span class="sig-name descname"><span class="pre">estimate_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Array</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tfilterspy/utils/optimisation_utils.html#ParameterEstimator.estimate_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tfilterspy.utils.optimisation_utils.ParameterEstimator.estimate_parameters" title="Permalink to this definition"></a></dt>
+<dd><p>Estimate the parameters Q and R using the specified estimation strategy.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tfilterspy.utils.optimisation_utils.ParameterEstimator.estimate_with_adaptive_filtering">
+<span class="sig-name descname"><span class="pre">estimate_with_adaptive_filtering</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Array</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="reference internal" href="_modules/tfilterspy/utils/optimisation_utils.html#ParameterEstimator.estimate_with_adaptive_filtering"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tfilterspy.utils.optimisation_utils.ParameterEstimator.estimate_with_adaptive_filtering" title="Permalink to this definition"></a></dt>
+<dd><p>Estimate Q and R adaptively based on innovations over time.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tfilterspy.utils.optimisation_utils.ParameterEstimator.estimate_with_cross_validation">
+<span class="sig-name descname"><span class="pre">estimate_with_cross_validation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_folds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="reference internal" href="_modules/tfilterspy/utils/optimisation_utils.html#ParameterEstimator.estimate_with_cross_validation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tfilterspy.utils.optimisation_utils.ParameterEstimator.estimate_with_cross_validation" title="Permalink to this definition"></a></dt>
+<dd><p>Estimate Q and R using k-fold cross-validation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tfilterspy.utils.optimisation_utils.ParameterEstimator.estimate_with_mle">
+<span class="sig-name descname"><span class="pre">estimate_with_mle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="reference internal" href="_modules/tfilterspy/utils/optimisation_utils.html#ParameterEstimator.estimate_with_mle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tfilterspy.utils.optimisation_utils.ParameterEstimator.estimate_with_mle" title="Permalink to this definition"></a></dt>
+<dd><p>Estimate Q and R using Maximum Likelihood Estimation (MLE).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tfilterspy.utils.optimisation_utils.ParameterEstimator.estimate_with_residual_analysis">
+<span class="sig-name descname"><span class="pre">estimate_with_residual_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Array</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="reference internal" href="_modules/tfilterspy/utils/optimisation_utils.html#ParameterEstimator.estimate_with_residual_analysis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tfilterspy.utils.optimisation_utils.ParameterEstimator.estimate_with_residual_analysis" title="Permalink to this definition"></a></dt>
+<dd><p>Estimate process (Q) and observation (R) noise covariances using residual analysis.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
-<section id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this heading"></a></h2>
+<section id="module-tfilterspy.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tfilterspy.utils" title="Permalink to this heading"></a></h2>
+<p>Utility functions for parameter estimation and optimization.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="tfilterspy.utils.ParameterEstimator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">tfilterspy.utils.</span></span><span class="sig-name descname"><span class="pre">ParameterEstimator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">estimation_strategy</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'residual_analysis'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tfilterspy/utils/optimisation_utils.html#ParameterEstimator"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tfilterspy.utils.ParameterEstimator" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="TFiltersPy.html#tfilterspy.base_estimator.BaseEstimator" title="tfilterspy.base_estimator.BaseEstimator"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseEstimator</span></code></a></p>
+<p>A class for estimating Kalman Filter parameters, such as process noise covariance (Q)
+and observation noise covariance (R), using different estimation methods.</p>
+<p>Estimation strategies include:
+- Residual Analysis
+- Maximum Likelihood Estimation (MLE)
+- Cross-Validation
+- Adaptive Filtering</p>
+<p>References:
+- Welch, G., &amp; Bishop, G. (1995). An Introduction to the Kalman Filter.
+- Haykin, S. (2001). Kalman Filtering and Neural Networks.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="tfilterspy.utils.ParameterEstimator.estimate_parameters">
+<span class="sig-name descname"><span class="pre">estimate_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Array</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tfilterspy/utils/optimisation_utils.html#ParameterEstimator.estimate_parameters"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tfilterspy.utils.ParameterEstimator.estimate_parameters" title="Permalink to this definition"></a></dt>
+<dd><p>Estimate the parameters Q and R using the specified estimation strategy.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tfilterspy.utils.ParameterEstimator.estimate_with_adaptive_filtering">
+<span class="sig-name descname"><span class="pre">estimate_with_adaptive_filtering</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Array</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="reference internal" href="_modules/tfilterspy/utils/optimisation_utils.html#ParameterEstimator.estimate_with_adaptive_filtering"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tfilterspy.utils.ParameterEstimator.estimate_with_adaptive_filtering" title="Permalink to this definition"></a></dt>
+<dd><p>Estimate Q and R adaptively based on innovations over time.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tfilterspy.utils.ParameterEstimator.estimate_with_cross_validation">
+<span class="sig-name descname"><span class="pre">estimate_with_cross_validation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_folds</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="reference internal" href="_modules/tfilterspy/utils/optimisation_utils.html#ParameterEstimator.estimate_with_cross_validation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tfilterspy.utils.ParameterEstimator.estimate_with_cross_validation" title="Permalink to this definition"></a></dt>
+<dd><p>Estimate Q and R using k-fold cross-validation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tfilterspy.utils.ParameterEstimator.estimate_with_mle">
+<span class="sig-name descname"><span class="pre">estimate_with_mle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iterations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="reference internal" href="_modules/tfilterspy/utils/optimisation_utils.html#ParameterEstimator.estimate_with_mle"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tfilterspy.utils.ParameterEstimator.estimate_with_mle" title="Permalink to this definition"></a></dt>
+<dd><p>Estimate Q and R using Maximum Likelihood Estimation (MLE).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tfilterspy.utils.ParameterEstimator.estimate_with_residual_analysis">
+<span class="sig-name descname"><span class="pre">estimate_with_residual_analysis</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measurements</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Array</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span></span></span><a class="reference internal" href="_modules/tfilterspy/utils/optimisation_utils.html#ParameterEstimator.estimate_with_residual_analysis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#tfilterspy.utils.ParameterEstimator.estimate_with_residual_analysis" title="Permalink to this definition"></a></dt>
+<dd><p>Estimate process (Q) and observation (R) noise covariances using residual analysis.</p>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 </section>
 
