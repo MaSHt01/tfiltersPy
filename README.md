@@ -48,26 +48,59 @@ ___________________________________________
 Example 1: Using a Kalman Filter to tame noisy data 🤖
 
 ```python
+from tfilterspy.state_estimation.linear_filters import DaskKalmanFilter
 import numpy as np
-from TFiltersPy.state_estimation.linear_filters import DaskKalmanFilter
+import dask.array as da
+from sklearn.datasets import load_digits
+from sklearn.model_selection import train_test_split
 
-# Define your system
-F = np.eye(2)
-H = np.eye(2)
-Q = np.eye(2) * 0.01
-R = np.eye(2) * 0.1
-x0 = np.zeros(2)
-P0 = np.eye(2)
+# Load and split the digits dataset (limited to 50 samples as in your code)
+digits = load_digits()
+x = digits.data   # (50, 64)
+y = digits.target # (50,)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
-# Create a Kalman Filter
-kf = DaskKalmanFilter(F, H, Q, R, x0, P0)
+# Convert to Dask arrays (adjust chunks for smaller dataset)
+x_train_dask = da.from_array(x_train, chunks=(10, 64))  # 40 samples, ~4 chunks
+x_test_dask = da.from_array(x_test, chunks=(10, 64))    # 10 samples, ~1 chunk
+y_train_dask = da.from_array(y_train, chunks=(10,))
+y_test_dask = da.from_array(y_test, chunks=(10,))
 
-# Simulate some noisy measurements
-measurements = np.random.randn(100, 2)
+# Add synthetic noise to the data
+noise_level = 0.88  # Adjust this to control noise intensity
+noisy_x_train_dask = x_train_dask + da.random.normal(0, noise_level, x_train_dask.shape, chunks=x_train_dask.chunks)
+noisy_x_test_dask = x_test_dask + da.random.normal(0, noise_level, x_test_dask.shape, chunks=x_test_dask.chunks)
 
-# Run the filter
-filtered_states = kf.run_filter(measurements)
-print(filtered_states.compute())
+# Define Kalman Filter parameters
+n_features = 64
+n_observations = 64
+F = np.eye(n_features)  # Static state transition
+H = np.eye(n_observations)  # Direct observation
+Q = np.eye(n_features) * 0.01  # Initial process noise
+R = np.eye(n_observations) * 0.1  # Initial observation noise
+x0 = np.zeros(n_features)  # Initial state
+P0 = np.eye(n_features) * 1.0  # Initial covariance
+
+# Initialize the DaskKalmanFilter
+kf = DaskKalmanFilter(
+    state_transition_matrix=F,
+    observation_matrix=H,
+    process_noise_cov=Q,
+    observation_noise_cov=R,
+    initial_state=x0,
+    initial_covariance=P0,
+    estimation_strategy="mle"
+)
+
+# Fit and estimate parameters on noisy training data
+kf.fit(noisy_x_train_dask)
+Q_est, R_est = kf.estimate_parameters(noisy_x_train_dask)
+kf.Q, kf.R = Q_est, R_est  # Update with estimated parameters
+
+# Denoise the data
+train_states = kf.predict().compute()  # Denoised training states
+kf.fit(noisy_x_test_dask)  # Refit on test data
+test_states = kf.predict().compute()  # Denoised test states
 ```
 
 
@@ -97,7 +130,7 @@ We welcome contributions of all types:
 ### Development Setup
   1. Clone the repo:
   ```bash
-    git clone https://github.com/LeparaLaMapara/tfilterpy.git
+    git clone https://github.com/MaSHt01/tfilterspy.git
   ```
   2. Install dependencies:
   ```bash
