@@ -9,8 +9,11 @@ Overview
 
 Key Concepts:
 - **fit()**: Initialize or train your filter - think of it as setting up your filtering magic ✨.
+
 - **predict()**: Wave your wand and generate state estimates from new measurements 🪄.
+
 - **run_filter()**: Process a sequence of measurements for a full filtering extravaganza 🎢.
+
 - **estimate_parameters()**: Let the filter automatically figure out optimal settings (because who wants to do that manually? 🤷‍♂️).
 
 Key Classes
@@ -71,7 +74,9 @@ Additional Notes
 ----------------
 We designed **TFiltersPy** to be:
 - **Simple & Intuitive:** No need to get bogged down in boilerplate—get filtering done with minimal fuss. 👍
+
 - **Extensible:** Customize and extend the filters to suit your unique data adventures. 🔄
+
 - **Distributed:** Built to work with Dask, so even your largest datasets can be tamed. 🌐
 
 
