@@ -8,12 +8,12 @@
    :align: center
 
 
-## Welcome to tfilterspy documentation – where we say "Sawubona, Molo, Hallo, Dumela, Ndaa, Xewani, and a Dinstang in Sipitori style!" and filter data like true South African rockstars!
+ Welcome to tfilterspy documentation 
 -----------------------------------------
+Where we say "Sawubona, Molo, Hallo, Dumela, Ndaa, Xewani, and a Dinstang in Sipitori style!" 
 
-
-TFiltersPy is your new favorite Python library for implementing state-of-the-art Bayesian filtering techniques like Kalman Filters and Particle Filters. 
-Whether you're working on noisy linear systems, nonlinear dynamics, or want to sound cool at a party when you say "I coded my own Kalman Filter," this is the library for you!
+**TFiltersPy is your new favorite Python library for implementing state-of-the-art Bayesian filtering techniques like Kalman Filters and Particle Filters. 
+Whether you're working on noisy linear systems, nonlinear dynamics, or want to sound cool at a party when you say "I coded my own Kalman Filter," this is the library for you!** 
 
 Features
 --------
@@ -52,9 +52,14 @@ Now, let the magic of Bayesian filtering begin! Enjoy the fun of transforming no
    api_usage
    examples_index
 
-Examples
---------
-See the `examples <https://github.com/LeparaLaMapara/tfilterspy/tree/main/examples>`_ directory for real-world use cases and Jupyter notebooks.
+Real World Use Cases🎢
+======================
+
+Welcome to the Notebook Playground – where your Jupyter notebooks come to life and show off their filtering magic! ✨
+
+For a full list of our example notebooks, check them out on GitHub: 
+
+`Visit Our Examples Directory <https://github.com/masht01/tfilterspy/tree/main/examples/notebooks>`_
 
 Additional Resources
 --------------------
