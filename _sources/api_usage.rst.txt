@@ -8,6 +8,7 @@ Overview
 **TFiltersPy** is here to help you tame unruly data with a range of filtering algorithms. Whether you're a wizard of linear systems 🧙‍♂️ or a champion of nonlinear chaos 🤹‍♀️, our filters are designed to be as straightforward (and fun) as possible.
 
 Key Concepts:
+---------
 - **fit()**: Initialize or train your filter - think of it as setting up your filtering magic ✨.
 
 - **predict()**: Wave your wand and generate state estimates from new measurements 🪄.
@@ -73,6 +74,7 @@ For the nitty-gritty details of each class and method, check out the module docs
 Additional Notes
 ----------------
 We designed **TFiltersPy** to be:
+
 - **Simple & Intuitive:** No need to get bogged down in boilerplate—get filtering done with minimal fuss. 👍
 
 - **Extensible:** Customize and extend the filters to suit your unique data adventures. 🔄
