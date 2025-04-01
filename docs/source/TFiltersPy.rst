@@ -1,4 +1,4 @@
-TFilterPy package
+tfilterspy package
 =================
 
 Subpackages
@@ -7,16 +7,16 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   TFiltersPy.state_estimation
-   TFiltersPy.utils
+   tfilterspy.state_estimation
+   tfilterspy.utils
 
 Submodules
 ----------
 
-TFiltersPy.base\_estimator module
+tfilterspy.base\_estimator module
 --------------------------------
 
-.. automodule:: TFiltersPy.base_estimator
+.. automodule:: tfilterspy.base_estimator
    :members:
    :undoc-members:
    :show-inheritance:
@@ -24,7 +24,7 @@ TFiltersPy.base\_estimator module
 Module contents
 ---------------
 
-.. automodule:: TFiltersPy
+.. automodule:: tfilterspy
    :members:
    :undoc-members:
    :show-inheritance:

@@ -33,9 +33,9 @@ No need for complicated rituals or secret handshakes—just open your terminal a
 
     pip install tfilterspy
 
-That’s it! In a flash, you’re all set to start filtering out the noise from your data.
+That's it! In a flash, you're all set to start filtering out the noise from your data.
 
-Prefer to tinker under the hood? If you’re feeling adventurous, clone the repo and install it in editable mode:
+Prefer to tinker under the hood? If you're feeling adventurous, clone the repo and install it in editable mode:
 
 .. code-block:: bash
 

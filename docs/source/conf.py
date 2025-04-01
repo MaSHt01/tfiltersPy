@@ -8,7 +8,7 @@ import sys
 sys.path.insert(0, os.path.abspath('../'))
 
 # -- Project information -----------------------------------------------------
-project = 'tfilters'
+project = 'tfilterspy'
 copyright = '2025, Thabang Mashinin-Sekhoto, \
 Lebogang Mashinini-Sekhoto, Palesa Mashinini-Sekhoto'
 author = 'Thabang Mashinin-Sekhoto, Lebogang Mashinini-Sekhoto, Palesa Mashinini-Sekhoto'

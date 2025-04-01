@@ -4,7 +4,7 @@ import dask
 
 from typing import Union
 
-from TFiltersPy.utils.optimisation_utils import ParameterEstimator
+from tfilterspy.utils.optimisation_utils import ParameterEstimator
 
 
 class DaskKalmanFilter(ParameterEstimator):

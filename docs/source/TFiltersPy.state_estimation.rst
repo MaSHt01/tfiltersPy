@@ -1,10 +1,10 @@
-TFiltersPy.state\_estimation package
+tfilterspy.state\_estimation package
 ===================================
 
 Submodules
 ----------
 
-TFiltersPy.state\_estimation.linear\_filters module
+tfilterspy.state\_estimation.linear\_filters module
 --------------------------------------------------
 
 .. automodule:: TFiltersPy.state_estimation.linear_filters
@@ -12,7 +12,7 @@ TFiltersPy.state\_estimation.linear\_filters module
    :undoc-members:
    :show-inheritance:
 
-TFiltersPy.state\_estimation.nonlinear\_filters module
+tfilterspy.state\_estimation.nonlinear\_filters module
 -----------------------------------------------------
 
 .. automodule:: TFiltersPy.state_estimation.nonlinear_filters
@@ -20,10 +20,10 @@ TFiltersPy.state\_estimation.nonlinear\_filters module
    :undoc-members:
    :show-inheritance:
 
-TFiltersPy.state\_estimation.particle\_filters module
+tfilterspy.state\_estimation.particle\_filters module
 ----------------------------------------------------
 
-.. automodule:: TFiltersPy.state_estimation.particle_filters
+.. automodule:: tfilterspy.state_estimation.particle_filters
    :members:
    :undoc-members:
    :show-inheritance:
@@ -31,7 +31,7 @@ TFiltersPy.state\_estimation.particle\_filters module
 Module contents
 ---------------
 
-.. automodule:: TFiltersPy.state_estimation
+.. automodule:: tfilterspy.state_estimation
    :members:
    :undoc-members:
    :show-inheritance:
