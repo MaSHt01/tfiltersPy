@@ -153,7 +153,7 @@ ________________
 
 ## Documentation 📚
 
-Detailed documentation is available at: https://MaSHt01.github.io/tfilterspy
+Detailed documentation is available at: https://ubunye-ai-ecosystems.github.io/uaie
 (Yes, we made it look fancy. You're welcome. ✨)
 _____________________
 
