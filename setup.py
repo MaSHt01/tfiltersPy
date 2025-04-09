@@ -7,7 +7,7 @@ setup(
     name="tfilterspy",
     use_scm_version=True,
     setup_requires=["setuptools_scm"],
-    author="Thabang L. Mashinini-Sekgoto",
+    author="Thabang L. Mashinini-Sekgoto, Lebogang L. Sekgoto, Palesa L. Sekgoto",
     author_email="thabangline@gmail.com",
     description="A Python package for Bayesian filtering models such as Kalman and Particle Filters.",
     long_description=long_description,
