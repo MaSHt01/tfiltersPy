@@ -21,6 +21,7 @@ extensions = [
     'sphinx.ext.autodoc.typehints', # Add type hints to the documentation
     'sphinx.ext.viewcode',          # Link source code in the docs
      'nbsphinx',                    # Add this line to use nbsphinx
+     'sphinx.ext.githubpages',      # For GitHub Pages integration
 ]
 templates_path = ['_templates']
 exclude_patterns = []
