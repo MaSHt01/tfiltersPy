@@ -22,6 +22,7 @@ extensions = [
     'sphinx.ext.viewcode',          # Link source code in the docs
      'nbsphinx',                    # Add this line to use nbsphinx
      'sphinx.ext.githubpages',      # For GitHub Pages integration
+     'sphinx.ext.mathjax',         # For rendering LaTeX math
 ]
 templates_path = ['_templates']
 exclude_patterns = []

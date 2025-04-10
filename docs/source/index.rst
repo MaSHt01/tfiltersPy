@@ -57,10 +57,11 @@ Features
    :caption: Contents:
 
    installation
-   API_DOCUMENTATION
-   EXAMPLES
-   LITERATURE
-   MODULES
-   MAINTAINERS
-   CONTRIBUTING
+   api_cheatsheet
+   examples
+   mathematics
+   modules
+   maintainers
+   contributing
+
 
