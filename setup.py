@@ -38,7 +38,7 @@ setup(
         "Operating System :: OS Independent",
     ],
     package_data={
-        "": ["examples/*.ipynb"],
+        "": ["examples/notebooks/*.ipynb", "README.md"],
     },
     include_package_data=True,
     # Uncomment the following if you have command-line tools

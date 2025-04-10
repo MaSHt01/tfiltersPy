@@ -28,7 +28,12 @@ dev = [
 where = ["."]
 include = ["tfilterspy*"]
 
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "node-and-date"
+
+
 [project.urls]
-Homepage = "https://github.com/MaSHt01/tfilterspy"
-Documentation = "https://github.com/MaSHt01/tfilterspy/docs"
-Repository = "https://github.com/MaSHt01/tfilterspy"
+Homepage = "ubunye-ai-ecosystems.github.io/tfilterspy/"
+Documentation = "https://github.com/ubunye-ai-ecosystems/tfilterspy/docs"
+Repository = "https://github.com/ubunye-ai-ecosystems/tfilterspy.git"
