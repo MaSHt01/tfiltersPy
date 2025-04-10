@@ -34,6 +34,8 @@ local_scheme = "node-and-date"
 
 
 [project.urls]
-Homepage = "ubunye-ai-ecosystems.github.io/tfilterspy/"
-Documentation = "https://github.com/ubunye-ai-ecosystems/tfilterspy/docs"
+Homepage = "https://github.com/ubunye-ai-ecosystems/tfilterspy"
+Documentation = "https://ubunye-ai-ecosystems.github.io/tfilterspy/"
 Repository = "https://github.com/ubunye-ai-ecosystems/tfilterspy.git"
+Tracker = "https://github.com/ubunye-ai-ecosystems/tfilterspy/issues"
+

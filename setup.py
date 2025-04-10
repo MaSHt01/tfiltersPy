@@ -12,13 +12,14 @@ setup(
     description="A Python package for Bayesian filtering models such as Kalman and Particle Filters.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://leparalamapara.github.io/tfilterspy/",
+    url="https://github.com/ubunye-ai-ecosystems/tfilterspy",
     project_urls={
-        "Documentation": "https://MaSHt01.github.io/tfilterspy/",
-        "Source": "https://github.com/MaSHt01/tfilterspy",
-        "Tracker": "https://github.com/MaSHt01/tfilterspy/issues",
-        "Logo": "https://raw.githubusercontent.com/MaSHt01/tfilterspy/main/branding/logo/tfilters-logo.jpeg",
+    "Documentation": "https://ubunye-ai-ecosystems.github.io/tfilterspy/",
+    "Source": "https://github.com/ubunye-ai-ecosystems/tfilterspy",
+    "Tracker": "https://github.com/ubunye-ai-ecosystems/tfilterspy/issues",
+    "Logo": "https://raw.githubusercontent.com/ubunye-ai-ecosystems/tfilterspy/main/branding/logo/tfilters-logo.jpeg",
     },
+
     packages=find_packages(),
     install_requires=[
         "dask>=2024.8.0",
