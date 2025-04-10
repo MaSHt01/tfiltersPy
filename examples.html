@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Real World Use-Cases 🎢 &mdash; tfilterspy 1.0.0 documentation</title>
+  <title>Real World Usecases 🎢 &mdash; tfilterspy 1.0.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,8 +18,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Modules" href="modules.html" />
-    <link rel="prev" title="API Reference" href="api_cheatsheet.html" /> 
+    <link rel="next" title="API Reference" href="api_cheatsheet.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -44,15 +44,17 @@
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api_cheatsheet.html">API Reference</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Real World Use-Cases 🎢</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Real World Usecases 🎢</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#use-case-templates">Use-Case Templates</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#topic-modeling-kalman-filtering">Topic Modeling + Kalman Filtering</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="api_cheatsheet.html">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="literature.html">understanding  Particle Filters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="literature.html#parameter-estimation-methods">Parameter Estimation Methods</a></li>
 </ul>
 
         </div>
@@ -69,7 +71,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Real World Use-Cases 🎢</li>
+      <li class="breadcrumb-item active">Real World Usecases 🎢</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/examples.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -79,8 +81,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="real-world-use-cases">
-<h1>Real World Use-Cases 🎢<a class="headerlink" href="#real-world-use-cases" title="Permalink to this heading"></a></h1>
+  <section id="real-world-usecases">
+<h1>Real World Usecases 🎢<a class="headerlink" href="#real-world-usecases" title="Permalink to this heading"></a></h1>
 <p>Welcome to the Notebook Playground -  where your Jupyter notebooks come to life and show off their filtering magic! ✨
 This section showcases real-world applications of TFiltersPy in noisy, messy, dynamic environments where <strong>Bayesian filtering</strong> shines.</p>
 <p>🚀 Whether you’re smoothing topic probabilities, estimating hidden states, or tracking uncertainty across time — these notebooks will get you started.</p>
@@ -101,7 +103,6 @@ This section showcases real-world applications of TFiltersPy in noisy, messy, dy
 <h3>Topic Modeling + Kalman Filtering<a class="headerlink" href="#topic-modeling-kalman-filtering" title="Permalink to this heading"></a></h3>
 <p>This notebook shows how to use TFiltersPy to smooth topic probabilities over time in a stream of disaster-related tweets.
 Smooth chaotic topic trends in disaster-related tweets to track evolving narratives over time.</p>
-<p>path_to_disaster_tweets= r’C:UsersthabanglukhethoDocumentsgitstfilterPyexamplesdatatrain_nlp.csv’</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">dask.array</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">da</span>
@@ -114,7 +115,8 @@ Smooth chaotic topic trends in disaster-related tweets to track evolving narrati
 <ol class="arabic simple">
 <li><p>Load Disaster Tweets</p></li>
 </ol>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_path</span> <span class="o">=</span> <span class="n">path_to_disaster_tweets</span>  <span class="c1"># Update after download</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">path_to_disaster_tweets</span><span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;/../../tfilterspy/examples/data/train_nlp.csv&#39;</span>
+<span class="n">data_path</span> <span class="o">=</span> <span class="n">path_to_disaster_tweets</span>  <span class="c1"># Update after download</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span><span class="p">)</span>
 <span class="n">tweets</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>  <span class="c1"># ~7613 tweets</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of tweets: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">tweets</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
@@ -185,8 +187,8 @@ Smooth chaotic topic trends in disaster-related tweets to track evolving narrati
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="api_cheatsheet.html" class="btn btn-neutral float-left" title="API Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="modules.html" class="btn btn-neutral float-right" title="Modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="api_cheatsheet.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
