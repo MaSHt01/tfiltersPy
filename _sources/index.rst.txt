@@ -60,7 +60,6 @@ Features
    examples
    literature
    api_cheatsheet
-   maintainers
-   contributing
+   modules
 
 
