@@ -58,9 +58,8 @@ Features
 
    installation
    examples
-   api_cheatsheet
-   modules
    literature
+   api_cheatsheet
    maintainers
    contributing
 
