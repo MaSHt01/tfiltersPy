@@ -34,10 +34,10 @@ Welcome to TFilterPy's Documentation!
      and a heartfelt <strong>Dinstang</strong> in pure Sipitori style 🇿🇦✨.
    </p>
 
-**TFilterPy** is your go-to open-source Python library for applying state-of-the-art Bayesian filtering — built with the power of Dask for scale,  
+**TFiltersPy** is your go-to open-source Python library for applying state-of-the-art Bayesian filtering — built with the power of Dask for scale,  
 the elegance of Kalman and Particle Filters for precision, and a sprinkle of local flavor to make it proudly African.
 
-✨ This library is part of the **Ubunye Artificial Intelligence Ecosystem (UIAE)** —  
+✨ This library is part of the **Ubunye Artificial Intelligent Ecosystems (UIAE)** —  
 a collaborative initiative to build powerful, locally rooted, and globally relevant AI tools.  
 Explore more projects at 👉 https://github.com/ubunye-ai-ecosystems
 
