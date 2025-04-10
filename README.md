@@ -5,13 +5,13 @@
 # **TFiltersPy** 🌀
 
 ![PyPI Version](https://img.shields.io/pypi/v/tfilterspy?color=blue&label=PyPI&style=for-the-badge)
-<!-- ![Codecov](https://img.shields.io/codecov/c/github/MaSHt01/tfilterspy?style=for-the-badge) -->
-![Build](https://github.com/MaSHt01/tfilterspy/actions/workflows/build_PYPIP.yml/badge.svg?style=for-the-badge)
+![Codecov](https://img.shields.io/codecov/c/github/ubunye-ai-ecosystems/tfilterspy?style=for-the-badge)
+![Build](https://github.com/ubunye-ai-ecosystems/tfilterspy/actions/workflows/build_PYPIP.yml/badge.svg?style=for-the-badge)
 ![PyPI Downloads](https://img.shields.io/pypi/dm/tfilterspy?style=for-the-badge)
 ![Docs](https://img.shields.io/badge/docs-online-brightgreen?style=for-the-badge)
-<!-- ![Python Versions](https://img.shields.io/pypi/pyversions/tfilterspy?style=for-the-badge) -->
-![GitHub Stars](https://img.shields.io/github/stars/MaSHt01/tfilterspy?style=for-the-badge&logo=github)
-![License](https://img.shields.io/github/license/MaSHt01/tfilterspy?color=green&style=for-the-badge)
+![Python Versions](https://img.shields.io/pypi/pyversions/tfilterspy?style=for-the-badge)
+![GitHub Stars](https://img.shields.io/github/stars/ubunye-ai-ecosystems/tfilterspy?style=for-the-badge&logo=github)
+![License](https://img.shields.io/github/license/ubunye-ai-ecosystems/tfilterspy?color=green&style=for-the-badge)
 
 ✨ **TFiltersPy** is your new favorite Python library for implementing state-of-the-art Bayesian filtering techniques like Kalman Filters and Particle Filters. Whether you're working on noisy linear systems, nonlinear dynamics, or want to sound cool at a party when you say "I coded my own Kalman Filter," this is the library for you!
 
