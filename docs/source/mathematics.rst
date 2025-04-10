@@ -11,7 +11,6 @@ At each step, it:
 We do this using a bit of matrix magic — here's how it works:
 
 Step 1: Predict (What do we *think* will happen?)
---------------------------------------------------
 
 .. math::
 
@@ -25,7 +24,6 @@ Step 1: Predict (What do we *think* will happen?)
 - :math:`Q` is the process noise — how much we think the system can change randomly.
 
 Step 2: Update (What did we *actually* see?)
---------------------------------------------
 
 .. math::
 
@@ -42,7 +40,6 @@ Step 2: Update (What did we *actually* see?)
 - :math:`K_k` is the Kalman Gain — it decides how much to trust the measurement vs the prediction.
 
 Step 3: Correct (Update our guess based on new info)
------------------------------------------------------
 
 .. math::
 
@@ -53,14 +50,13 @@ Step 3: Correct (Update our guess based on new info)
 - We update our estimate of the state and its uncertainty.
 
 Intuition:
-----------
 
 - If the measurement is very noisy (big :math:`R`), we trust our prediction more.
 - If the prediction is uncertain (big :math:`P`), we trust the measurement more.
 
 This beautiful balance between **what we expect** and **what we observe** is what makes the Kalman Filter such a powerful tool for filtering out noise and estimating the hidden truth. ✨
 
-Mathematics Behind the Particle Filter
+understanding  Particle Filters
 ======================================
 
 The Particle Filter is like a swarm of guesses (particles) trying to chase the truth. 🐝  
@@ -69,7 +65,6 @@ Each particle represents a hypothesis of where the system could be. As time move
 It's filtering—but with friends.
 
 Step 1: Initialization 🐣
--------------------------
 
 Start with `N` particles, each one initialized at the same known state (or sampled if you want variation):
 
@@ -82,7 +77,6 @@ Where:
 - :math:`w_i^{(0)}` is its weight (uniform initially)
 
 Step 2: Prediction 🔮
----------------------
 
 Let each particle evolve through the state transition model and some random noise:
 
@@ -95,7 +89,6 @@ Where:
 - :math:`\epsilon_i^{(k)} \sim \mathcal{N}(0, Q)` is process noise
 
 Step 3: Measurement Update 🔍
------------------------------
 
 Compare each particle’s prediction to the actual observation:
 
@@ -120,7 +113,6 @@ Normalize weights so they sum to 1:
     \sum_{i=1}^{N} w_i^{(k)} = 1
 
 Step 4: Resampling ♻️
----------------------
 
 If most particles have near-zero weights, we resample to keep only good particles:
 
@@ -131,7 +123,6 @@ Draw `N` new particles **with replacement**, favoring high-weight ones.
     x_i^{(k)} \sim \{ x_j^{(k)} \}_{j=1}^{N}, \quad \text{with probability } w_j^{(k)}
 
 Step 5: Estimate State 🎯
--------------------------
 
 The best guess of the state is just a weighted average of all particles:
 
@@ -140,7 +131,6 @@ The best guess of the state is just a weighted average of all particles:
     \hat{x}^{(k)} = \sum_{i=1}^{N} w_i^{(k)} x_i^{(k)}
 
 Bonus: Residuals
-----------------
 
 We can define the residual (aka innovation) at each step:
 
@@ -151,7 +141,6 @@ We can define the residual (aka innovation) at each step:
 Use these for parameter estimation or diagnostics!
 
 Intuition:
-----------
 
 - If your model is spot-on, particles stay tight and track the truth.
 - If your model is wrong or noisy, particles spread out, but the filter still works by focusing on better guesses.
@@ -166,7 +155,6 @@ When you're not sure how much noise is in your system (Q and R), these methods h
 Let’s break down each method simply:
 
 Notation:
----------
 - :math:`Q`: Process noise covariance (uncertainty in the system’s evolution).
 - :math:`R`: Observation noise covariance (uncertainty in what we observe).
 - :math:`y_t`: Observation at time t.
@@ -174,7 +162,6 @@ Notation:
 - :math:`r_t = y_t - \hat{y}_t`: The *residual* or *innovation*.
 
 1. Residual Analysis 📊
-------------------------
 
 This method says: "Let’s look at the errors and calculate how wild they are."
 
@@ -189,7 +176,6 @@ We assume the residuals are due to noise. So we use their **variance** and **cov
 Where :math:`\bar{r}` is the mean of the residuals.
 
 2. Maximum Likelihood Estimation (MLE) 🔍
------------------------------------------
 
 MLE says: “Let’s find the Q and R that *most likely* made our observations happen.”
 
@@ -209,7 +195,6 @@ Simplified:
 Where :math:`i` is the iteration index. We stop after a few rounds or when it converges.
 
 3. Cross-Validation (CV) 🔁
----------------------------
 
 Let’s split the data into parts (folds), train the filter on some, and validate on the rest.
 
@@ -231,7 +216,7 @@ Then we compute the **validation score**:
 We pick the Q and R from the fold with the **lowest score**.
 
 4. Adaptive Filtering (Online Updating) 🔄
-------------------------------------------
+
 
 This method says: “Let’s keep updating Q and R as we go using a small learning rate.”
 
@@ -249,6 +234,5 @@ Where:
 
 The filter gets smarter over time, adjusting itself like a thermostat reacting to room temperature. 🌡️
 
----
 
 These techniques are all about helping the filter "learn" how noisy the world is — so it can be confident when it needs to be, and skeptical when things look fishy. 🐠

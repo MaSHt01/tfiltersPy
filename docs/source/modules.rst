@@ -1,34 +1,32 @@
 Modules
--------
-.. automodule:: tFilterspy.base_estimator
+=======
+
+.. automodule:: tfilterspy.base_estimator
    :members:
    :undoc-members:
    :show-inheritance:
    :inherited-members:
 
-.. automodule:: tFilterspy.state_estimation.linear_filters
+.. automodule:: tfilterspy.state_estimation.linear_filters
    :members:
    :undoc-members:
    :show-inheritance:
-   :inherited-members:
 
-.. automodule:: tFilterspy.state_estimation.nonlinear_filters
+.. automodule:: tfilterspy.state_estimation.nonlinear_filters
    :members:
    :undoc-members:
    :show-inheritance:
-   :inherited-members:
 
-.. automodule:: tFilterspy.state_estimation.particle_filters
+.. automodule:: tfilterspy.state_estimation.particle_filters
    :members:
    :undoc-members:
    :show-inheritance:
-   :inherited-members:
 
-.. automodule:: tFilterspy.utils.optimisation_utils
+.. automodule:: tfilterspy.utils.optimisation_utils
    :members:
    :undoc-members:
    :show-inheritance:
-   :inherited-members:
+
 
 Developer Notes
 ---------------
