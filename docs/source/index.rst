@@ -56,4 +56,11 @@ Features
    :maxdepth: 2
    :caption: Contents:
 
-   installation
+   INSTALLATION
+   API_DOCUMENTATION
+   EXAMPLES
+   LITERATURE
+   MODULES
+   MAINTAINERS
+   CONTRIBUTING
+
