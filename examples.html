@@ -88,7 +88,6 @@ This section showcases real-world applications of TFiltersPy in noisy, messy, dy
 <p>🚀 Whether you’re smoothing topic probabilities, estimating hidden states, or tracking uncertainty across time — these notebooks will get you started.</p>
 <p>📚 For a full list of our example notebooks, head over to our GitHub:</p>
 <p>🔗 <a class="reference external" href="https://github.com/ubunye-ai-ecosystems/tfilterspy/tree/main/examples/notebooks">Visit the Examples Directory</a></p>
-<p>—</p>
 <section id="use-case-templates">
 <h2>Use-Case Templates<a class="headerlink" href="#use-case-templates" title="Permalink to this heading"></a></h2>
 <p>Each example notebook typically follows this structure:</p>
@@ -100,7 +99,6 @@ This section showcases real-world applications of TFiltersPy in noisy, messy, dy
 <li><p><strong>Visualization</strong> - Plot raw vs filtered estimates.</p></li>
 <li><p><strong>Interpretation</strong> - Gain insights into dynamics, trends, and uncertainty.</p></li>
 </ol>
-<hr class="docutils" />
 <section id="topic-modeling-kalman-filtering">
 <h3>Topic Modeling + Kalman Filtering<a class="headerlink" href="#topic-modeling-kalman-filtering" title="Permalink to this heading"></a></h3>
 <p>This notebook shows how to use TFiltersPy to smooth topic probabilities over time in a stream of disaster-related tweets.
@@ -115,70 +113,49 @@ Smooth chaotic topic trends in disaster-related tweets to track evolving narrati
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 </pre></div>
 </div>
-<p>1. Load Disaster Tweets
-.. code-block:: python</p>
-<blockquote>
-<div><p>data_path = path_to_disaster_tweets  # Update after download
-df = pd.read_csv(data_path)
-tweets = df[‘text’].values  # ~7613 tweets
-print(f”Number of tweets: {len(tweets)}”)</p>
-</div></blockquote>
-<p>2. Preprocess and Extract Topics
-.. code-block:: python</p>
-<blockquote>
-<div><p>vectorizer = CountVectorizer(max_features=5000, stop_words=’english’)
-X = vectorizer.fit_transform(tweets)
-n_topics = 5  # e.g., disaster, weather, casual, news, other
-lda = LatentDirichletAllocation(n_components=n_topics, random_state=42)
-topic_dist = lda.fit_transform(X)  # Shape: (7613, 5)
-X_dask = da.from_array(topic_dist, chunks=(1000, n_topics))
-print(f”Topic distribution shape: {X_dask.shape}”)</p>
-</div></blockquote>
-<p>3. Kalman Filter Initiative
-.. code-block:: python</p>
-<blockquote>
-<div><p>n_features = 14
-F = np.eye(n_features)  # Static transition (identity for simplicity)
-H = np.eye(n_features)  # Direct observation
-Q = np.eye(n_features) * 0.01  # Process noise
-R = np.eye(n_features) * 0.1   # Observation noise
-x0 = np.zeros(n_features)      # Initial state
-P0 = np.eye(n_features)        # Initial covariance
-kf = DaskKalmanFilter(F, H, Q, R, x0, P0, estimation_strategy=”residual_analysis”)</p>
-</div></blockquote>
-<p>4. Fit and Predict
-.. code-block:: python</p>
-<blockquote>
-<div><p>kf.fit(X_dask)
-smoothed_topics = kf.predict().compute()</p>
-</div></blockquote>
-<p>5. Plot Raw vs Smoothed Topics (first 1000 tweets)
-.. code-block:: python</p>
-<blockquote>
-<div><p>plt.figure(figsize=(12, 8))
-for i in range(n_topics):</p>
-<blockquote>
-<div><p>plt.subplot(n_topics, 1, i + 1)
-plt.plot(topic_dist[:1000, i], label=f”Raw Topic {i+1}”, alpha=0.5)
-plt.plot(smoothed_topics[:1000, i], label=f”Smoothed Topic {i+1}”, linestyle=”–“)
-plt.title(f”Topic {i+1}”)
-plt.xlabel(“Tweet Index (Time)”)
-plt.ylabel(“Probability”)
-plt.legend()</p>
-</div></blockquote>
-<p>plt.tight_layout()
-plt.show()</p>
-</div></blockquote>
-<p>6. Interpret Topics
-.. code-block:: python</p>
-<blockquote>
-<div><p>feature_names = vectorizer.get_feature_names_out()
-for i, topic in enumerate(<a href="#id1"><span class="problematic" id="id2">lda.components_</span></a>):</p>
-<blockquote>
-<div><p>top_words = [feature_names[j] for j in topic.argsort()[-5:]]
-print(f”Topic {i+1}: {’, ‘.join(top_words)}”)</p>
-</div></blockquote>
-</div></blockquote>
+<ol class="arabic simple">
+<li><p>Load Disaster Tweets</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">data_path</span> <span class="o">=</span> <span class="n">path_to_disaster_tweets</span>  <span class="c1"># Update after download</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">data_path</span><span class="p">)</span>
+<span class="n">tweets</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>  <span class="c1"># ~7613 tweets</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Number of tweets: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">tweets</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Preprocess and Extract Topics</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">max_features</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">stop_words</span><span class="o">=</span><span class="s1">&#39;english&#39;</span><span class="p">)</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">tweets</span><span class="p">)</span>
+<span class="n">n_topics</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># e.g., disaster, weather, casual, news, other</span>
+<span class="n">lda</span> <span class="o">=</span> <span class="n">LatentDirichletAllocation</span><span class="p">(</span><span class="n">n_components</span><span class="o">=</span><span class="n">n_topics</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">topic_dist</span> <span class="o">=</span> <span class="n">lda</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>  <span class="c1"># Shape: (7613, 5)</span>
+<span class="n">X_dask</span> <span class="o">=</span> <span class="n">da</span><span class="o">.</span><span class="n">from_array</span><span class="p">(</span><span class="n">topic_dist</span><span class="p">,</span> <span class="n">chunks</span><span class="o">=</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="n">n_topics</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Topic distribution shape: </span><span class="si">{</span><span class="n">X_dask</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="3">
+<li><p>Kalman Filter Initiative</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">n_features</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="n">F</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">n_features</span><span class="p">)</span>  <span class="c1"># Static transition (identity for simplicity)</span>
+<span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">n_features</span><span class="p">)</span>  <span class="c1"># Direct observation</span>
+<span class="n">Q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">n_features</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.01</span>  <span class="c1"># Process noise</span>
+<span class="n">R</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">n_features</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.1</span>   <span class="c1"># Observation noise</span>
+<span class="n">x0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n_features</span><span class="p">)</span>      <span class="c1"># Initial state</span>
+<span class="n">P0</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">eye</span><span class="p">(</span><span class="n">n_features</span><span class="p">)</span>        <span class="c1"># Initial covariance</span>
+<span class="n">kf</span> <span class="o">=</span> <span class="n">DaskKalmanFilter</span><span class="p">(</span><span class="n">F</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">Q</span><span class="p">,</span> <span class="n">R</span><span class="p">,</span> <span class="n">x0</span><span class="p">,</span> <span class="n">P0</span><span class="p">,</span> <span class="n">estimation_strategy</span><span class="o">=</span><span class="s2">&quot;residual_analysis&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p>Fit and Predict</p></li>
+</ol>
+<ol class="arabic simple" start="5">
+<li><p>Plot Raw vs Smoothed Topics (first 1000 tweets)</p></li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><p>Interpret Topics</p></li>
+</ol>
 </section>
 </section>
 </section>
