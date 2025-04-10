@@ -17,18 +17,21 @@ Getting Started
    Go to https://github.com/ubunye-ai-ecosystems/tfilterspy and click "Fork".
 
 2. **Clone your fork**  
+
    .. code-block:: bash
 
        git clone https://github.com/your-username/tfilterspy.git
        cd tfilterspy
 
 3. **Create a virtual environment**  
+
    .. code-block:: bash
 
        python -m venv venv
        source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
 4. **Install dependencies**  
+
    .. code-block:: bash
 
        pip install -e .[dev]
@@ -36,6 +39,7 @@ Getting Started
    This installs the library along with development tools like `pytest`, `black`, `ruff`, and `sphinx`.
 
 5. **Run the tests**  
+
    .. code-block:: bash
 
        pytest
