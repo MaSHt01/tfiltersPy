@@ -20,7 +20,7 @@ Getting Started
 
    .. code-block:: bash
 
-       git clone https://github.com/your-username/tfilterspy.git
+       git clone https://github.com/ubunye-ai-ecosystems/tfilterspy.git
        cd tfilterspy
 
 3. **Create a virtual environment**  
@@ -74,7 +74,7 @@ To build docs locally:
     open _build/html/index.html
 
 Notebooks for examples should be placed in:  
-`examples/notebooks/your_usecase_here.ipynb`
+`examples/notebooks/particle-filters-usecases.ipynb`
 
 Pull Requests
 
