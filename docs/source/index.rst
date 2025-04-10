@@ -53,7 +53,7 @@ Features
 - **User-Friendly API:** Clean, modular, and scikit-learn like API — with examples, documentation, and sensible defaults so you can go from idea 💡 to insight 📈 fast.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
    INSTALLATION
