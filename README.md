@@ -39,7 +39,7 @@ pip install tfilterspy
 Want to contribute or tinker with the code? Clone the repo and install the development dependencies:
 
 ```bash
-git clone https://github.com/MaSHt01/tfilterspy.git
+git clone git@github.com:ubunye-ai-ecosystems/tfilterspy.git
 cd tfilterspy
 pip install .[dev]
 ```
@@ -131,7 +131,7 @@ We welcome contributions of all types:
 ### Development Setup
   1. Clone the repo:
   ```bash
-    git clone https://github.com/MaSHt01/tfilterspy.git
+    git clone git@github.com:ubunye-ai-ecosystems/tfilterspy.git
   ```
   2. Install dependencies:
   ```bash
@@ -154,7 +154,7 @@ ________________
 
 ## Documentation 📚
 
-Detailed documentation is available at: https://ubunye-ai-ecosystems.github.io/uaie
+Detailed documentation is available at: https://ubunye-ai-ecosystems.github.io/tfilterspy
 (Yes, we made it look fancy. You're welcome. ✨)
 _____________________
 
