@@ -1,4 +1,4 @@
- Mathematics Behind the Kalman Filter
+Understanding the Kalman Filter
 ====================================
 
 Think of the Kalman Filter like a smart guesser 🤖.
@@ -56,13 +56,12 @@ Intuition:
 
 This beautiful balance between **what we expect** and **what we observe** is what makes the Kalman Filter such a powerful tool for filtering out noise and estimating the hidden truth. ✨
 
-understanding  Particle Filters
+Understanding  Particle Filters
 ======================================
 
 The Particle Filter is like a swarm of guesses (particles) trying to chase the truth. 🐝  
 Each particle represents a hypothesis of where the system could be. As time moves on, we adjust how much we trust each guess based on what we observe.
 
-It's filtering—but with friends.
 
 Step 1: Initialization 🐣
 
