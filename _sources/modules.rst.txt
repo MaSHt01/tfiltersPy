@@ -27,16 +27,3 @@ Modules
    :undoc-members:
    :show-inheritance:
 
-
-Developer Notes
----------------
-🛠 **TFiltersPy** is:
-- **Modular** – Easy to extend and override.
-- **Dask-native** – Use for big data, sensor networks, or streaming applications.
-- **Batteries-included** – With noise estimation and future plans for MCMC integration, UKF, and hybrid filtering.
-
-Indices and Tables
-------------------
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
