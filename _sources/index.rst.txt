@@ -61,5 +61,9 @@ Features
    literature
    api_cheatsheet
    modules
+   CONTRIBUTING
+   MAINTAINERS
+
+
 
 
