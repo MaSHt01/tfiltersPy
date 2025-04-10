@@ -48,15 +48,7 @@
 <li class="toctree-l1"><a class="reference internal" href="literature.html">Understanding the Kalman Filter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="literature.html#understanding-particle-filters">Understanding  Particle Filters</a></li>
 <li class="toctree-l1"><a class="reference internal" href="literature.html#parameter-estimation-methods">Parameter Estimation Methods</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#core-concepts">🧠 Core Concepts</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#quick-cheatsheet">Quick Cheatsheet</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#key-classes">Key Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#design-philosophy">Design Philosophy</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#developer-tip">Developer Tip 💡</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
 </ul>
 
@@ -87,24 +79,15 @@
   <section id="api-reference">
 <h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this heading"></a></h1>
 <p>Welcome to the <strong>TFiltersPy</strong> API Reference — where filtering becomes intuitive, scalable, and just a little bit fun 🎉.</p>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
-<p><strong>TFiltersPy</strong> helps you tame noisy signals and hidden states using Bayesian filtering. From the elegance of Kalman Filters to the chaotic beauty of Particle Filters, everything is built with Dask for distributed power.</p>
-</section>
-<section id="core-concepts">
-<h2>🧠 Core Concepts<a class="headerlink" href="#core-concepts" title="Permalink to this heading"></a></h2>
-<ul class="simple">
-<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code> – Setup or train your filter. Think of this as telling your filter what kind of magic to perform. ✨</p></li>
-<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">predict()</span></code> – Perform state prediction on new data. Like fortune-telling, but backed by math. 🔮</p></li>
-<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">run_filter()</span></code> – Process an entire sequence of measurements and enjoy the full filtering ride. 🎢</p></li>
-<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">estimate_parameters()</span></code> – Let the filter estimate the best noise settings (Q and R) for you. No manual tuning necessary. 🛠️</p></li>
-</ul>
-</section>
-<section id="quick-cheatsheet">
-<h2>Quick Cheatsheet<a class="headerlink" href="#quick-cheatsheet" title="Permalink to this heading"></a></h2>
-</section>
-<section id="key-classes">
-<h2>Key Classes<a class="headerlink" href="#key-classes" title="Permalink to this heading"></a></h2>
+<p>Overview
+<strong>TFiltersPy</strong> helps you tame noisy signals and hidden states using Bayesian filtering. From the elegance of Kalman Filters to the chaotic beauty of Particle Filters, everything is built with Dask for distributed power.</p>
+<p>🧠 Core Concepts
+- <code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code> – Setup or train your filter. Think of this as telling your filter what kind of magic to perform. ✨
+- <code class="xref py py-meth docutils literal notranslate"><span class="pre">predict()</span></code> – Perform state prediction on new data. Like fortune-telling, but backed by math. 🔮
+- <code class="xref py py-meth docutils literal notranslate"><span class="pre">run_filter()</span></code> – Process an entire sequence of measurements and enjoy the full filtering ride. 🎢
+- <code class="xref py py-meth docutils literal notranslate"><span class="pre">estimate_parameters()</span></code> – Let the filter estimate the best noise settings (Q and R) for you. No manual tuning necessary. 🛠️</p>
+<p>Quick Cheatsheet</p>
+<p>Key Classes</p>
 <ul class="simple">
 <li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">tfilterspy.base_estimator.BaseEstimator</span></code>
 The foundation of all filters – includes array management, validation, and useful helper functions.</p></li>
@@ -123,22 +106,16 @@ For systems where you can linearize around the current estimate.</p></li>
 <li><p><strong>UnscentedKalmanFilter</strong> <em>(Planned)</em>
 For better handling of nonlinear transformations without Jacobians.</p></li>
 </ul>
-</section>
-<section id="design-philosophy">
-<h2>Design Philosophy<a class="headerlink" href="#design-philosophy" title="Permalink to this heading"></a></h2>
-<p>We follow a <cite>scikit-learn</cite> inspired design with a unified and consistent API:</p>
+<p>Design Philosophy
+We follow a <cite>scikit-learn</cite> inspired design with a unified and consistent API:</p>
 <ul class="simple">
 <li><p>Modular and extensible filters.</p></li>
 <li><p>Lazy computation with Dask for scalability.</p></li>
 <li><p>Easy integration into real-world pipelines and Jupyter Notebooks.</p></li>
 </ul>
-</section>
-<section id="developer-tip">
-<h2>Developer Tip 💡<a class="headerlink" href="#developer-tip" title="Permalink to this heading"></a></h2>
-<p>All filters inherit from <cite>BaseEstimator</cite> and optionally from <cite>ParameterEstimator</cite> if they support dynamic Q/R tuning.</p>
-<hr class="docutils" />
+<p>Developer Tip 💡
+All filters inherit from <cite>BaseEstimator</cite> and optionally from <cite>ParameterEstimator</cite> if they support dynamic Q/R tuning.</p>
 <p>To dive deeper into class-level documentation, check the full <a class="reference internal" href="modules.html"><span class="doc">Modules</span></a> or explore the examples in <a class="reference internal" href="examples.html"><span class="doc">Real World Usecases 🎢</span></a>.</p>
-</section>
 </section>
 
 
