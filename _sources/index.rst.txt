@@ -59,7 +59,6 @@ Features
    installation
    api_cheatsheet
    examples
-   mathematics
    modules
    maintainers
    contributing
