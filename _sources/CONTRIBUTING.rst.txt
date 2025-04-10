@@ -1,4 +1,4 @@
-Contributing to TFilterPy
+Contributing to TFiltersPy
 ==========================
 
 First off, thank you for considering contributing to **TFilterPy**! 🙌  
@@ -12,7 +12,6 @@ We welcome all kinds of contributions:
 - 💡 Suggestions and discussions
 
 Getting Started
----------------
 
 1. **Fork the repository**  
    Go to https://github.com/ubunye-ai-ecosystems/tfilterspy and click "Fork".
@@ -42,7 +41,6 @@ Getting Started
        pytest
 
 Code Style
-----------
 
 We follow [PEP8](https://peps.python.org/pep-0008/).  
 Before submitting, please run:
@@ -55,7 +53,6 @@ Before submitting, please run:
 This ensures your code is formatted and linted properly.
 
 Branching Strategy
-------------------
 
 - `main`: Stable releases
 - `dev`: Active development
@@ -63,7 +60,6 @@ Branching Strategy
 - Bugfix branches: `fix/some-bug-name`
 
 Writing Documentation
----------------------
 
 To build docs locally:
 
@@ -77,7 +73,6 @@ Notebooks for examples should be placed in:
 `examples/notebooks/your_usecase_here.ipynb`
 
 Pull Requests
--------------
 
 1. Push your changes and open a pull request to `dev`.
 2. Add a descriptive title and explain your motivation.
@@ -89,7 +84,6 @@ All PRs will go through:
 - 📚 Docs build check
 
 Need Help?
-----------
 
 Open an issue or join the discussion at  
 https://github.com/ubunye-ai-ecosystems/tfilterspy/discussions
@@ -97,7 +91,6 @@ https://github.com/ubunye-ai-ecosystems/tfilterspy/discussions
 We’re all here to learn and build together. ❤️
 
 License
--------
 
 By contributing, you agree that your contributions will be licensed under the same license as this project (MIT, Apache 2.0, etc.).
 
