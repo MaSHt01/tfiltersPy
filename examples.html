@@ -111,6 +111,15 @@ This section showcases real-world applications of TFiltersPy in noisy, messy, dy
 <p>This notebook shows how to use TFiltersPy to smooth topic probabilities over time in a stream of disaster-related tweets.
 Smooth chaotic topic trends in disaster-related tweets to track evolving narratives over time.</p>
 <p>path_to_disaster_tweets= r’C:UsersthabanglukhethoDocumentsgitstfilterPyexamplesdatatrain_nlp.csv’</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">dask.array</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">da</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.feature_extraction.text</span><span class="w"> </span><span class="kn">import</span> <span class="n">CountVectorizer</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.decomposition</span><span class="w"> </span><span class="kn">import</span> <span class="n">LatentDirichletAllocation</span>
+<span class="kn">from</span><span class="w">  </span><span class="nn">tfilterspy.state_estimation.particle_filters</span><span class="w"> </span><span class="kn">import</span> <span class="n">DaskParticleFilter</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+</pre></div>
+</div>
 <p>1. Load Disaster Tweets
 .. code-block:: python</p>
 <blockquote>
