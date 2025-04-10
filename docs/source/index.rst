@@ -57,10 +57,3 @@ Features
    :caption: Contents:
 
    INSTALLATION
-   .. API_DOCUMENTATION
-   .. EXAMPLES
-   .. LITERATURE
-   .. MODULES
-   .. MAINTAINERS
-   .. CONTRIBUTING
-
