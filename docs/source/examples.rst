@@ -57,6 +57,7 @@ path_to_disaster_tweets= r'C:\Users\thabanglukhetho\Documents\gits\tfilterPy\exa
 
 
 .. code-block:: python
+
     import pandas as pd
     import numpy as np
     import dask.array as da
@@ -67,6 +68,7 @@ path_to_disaster_tweets= r'C:\Users\thabanglukhetho\Documents\gits\tfilterPy\exa
 
 1. Load Disaster Tweets
 .. code-block:: python
+
     data_path = path_to_disaster_tweets  # Update after download
     df = pd.read_csv(data_path)
     tweets = df['text'].values  # ~7613 tweets
@@ -74,6 +76,7 @@ path_to_disaster_tweets= r'C:\Users\thabanglukhetho\Documents\gits\tfilterPy\exa
 
 2. Preprocess and Extract Topics
 .. code-block:: python
+
     vectorizer = CountVectorizer(max_features=5000, stop_words='english')
     X = vectorizer.fit_transform(tweets)
     n_topics = 5  # e.g., disaster, weather, casual, news, other
@@ -84,6 +87,7 @@ path_to_disaster_tweets= r'C:\Users\thabanglukhetho\Documents\gits\tfilterPy\exa
 
 3. Kalman Filter Initiative
 .. code-block:: python
+    
     n_features = 14
     F = np.eye(n_features)  # Static transition (identity for simplicity)
     H = np.eye(n_features)  # Direct observation
