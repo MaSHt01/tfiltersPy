@@ -56,4 +56,4 @@ Features
    :maxdepth: 2
    :caption: Contents:
 
-   INSTALLATION
+   installation
