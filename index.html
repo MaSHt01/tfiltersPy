@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Features &mdash; tfilterspy 1.0.0 documentation</title>
+  <title>Welcome to TFilterPy’s Documentation! &mdash; tfilterspy 1.0.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -18,7 +18,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="API Reference" href="api_usage.html" /> 
+    <link rel="next" title="Installation" href="installation.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,8 +42,28 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="api_usage.html">API Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples_index.html">Real World Use Cases🎢</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_cheatsheet.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Real World Use-Cases 🎢</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html">Step 1: Predict (What do we <em>think</em> will happen?)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-2-update-what-did-we-actually-see">Step 2: Update (What did we <em>actually</em> see?)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-3-correct-update-our-guess-based-on-new-info">Step 3: Correct (Update our guess based on new info)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#intuition">Intuition:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-1-initialization">Step 1: Initialization 🐣</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-2-prediction">Step 2: Prediction 🔮</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-3-measurement-update">Step 3: Measurement Update 🔍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-4-resampling">Step 4: Resampling ♻️</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-5-estimate-state">Step 5: Estimate State 🎯</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#bonus-residuals">Bonus: Residuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#id1">Intuition:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#notation">Notation:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#residual-analysis">1. Residual Analysis 📊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#maximum-likelihood-estimation-mle">2. Maximum Likelihood Estimation (MLE) 🔍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#cross-validation-cv">3. Cross-Validation (CV) 🔁</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#adaptive-filtering-online-updating">4. Adaptive Filtering (Online Updating) 🔄</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">TFilterPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MAINTAINERS.html">Maintainers of TFilterPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contributing to TFilterPy</a></li>
 </ul>
 
         </div>
@@ -60,7 +80,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Features</li>
+      <li class="breadcrumb-item active">Welcome to TFilterPy’s Documentation!</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -70,68 +90,105 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <p><strong>TFiltersPy is your new favorite Python library for implementing state-of-the-art Bayesian filtering techniques like Kalman Filters and Particle Filters.
-Whether you’re working on noisy linear systems, nonlinear dynamics, or want to sound cool at a party when you say “I coded my own Kalman Filter,” this is the library for you!</strong></p>
+  <a class="reference internal image-reference" href="_images/tfilters-logo.jpeg"><img alt="tfilters logo" class="align-center" src="_images/tfilters-logo.jpeg" style="width: 500px;" /></a>
+<br><a class="reference external image-reference" href="https://pypi.org/project/tfilterspy/"><img alt="PyPI version" src="https://img.shields.io/pypi/v/tfilterspy.svg" /></a>
+<a class="reference external image-reference" href="https://github.com/ubunye-ai-ecosystems/tfilterspy/blob/main/LICENSE"><img alt="License" src="https://img.shields.io/pypi/l/tfilterspy.svg" /></a>
+<a class="reference external image-reference" href="https://github.com/ubunye-ai-ecosystems"><img alt="Made in Africa" src="https://img.shields.io/badge/made%20in-Africa-red.svg" /></a>
+<a class="reference external image-reference" href="https://github.com/ubunye-ai-ecosystems/tfilterspy"><img alt="GitHub Stars" src="https://img.shields.io/github/stars/ubunye-ai-ecosystems/tfilterspy.svg?style=social" /></a>
+<section id="welcome-to-tfilterpy-s-documentation">
+<h1>Welcome to TFilterPy’s Documentation!<a class="headerlink" href="#welcome-to-tfilterpy-s-documentation" title="Permalink to this heading"></a></h1>
+<p style="color: crimson; font-size: 0.9em; margin-top: 0.5em;">
+  Where we say: <strong>Sawubona, Molo, Hallo, Dumela, Ndaa, Xewani</strong>,
+  and a heartfelt <strong>Dinstang</strong> in pure Sipitori style 🇿🇦✨.
+</p><p><strong>TFilterPy</strong> is your go-to open-source Python library for applying state-of-the-art Bayesian filtering — built with the power of Dask for scale,
+the elegance of Kalman and Particle Filters for precision, and a sprinkle of local flavor to make it proudly African.</p>
+<p>✨ This library is part of the <strong>Ubunye Artificial Intelligence Ecosystem (UIAE)</strong> —
+a collaborative initiative to build powerful, locally rooted, and globally relevant AI tools.
+Explore more projects at 👉 <a class="reference external" href="https://github.com/ubunye-ai-ecosystems">https://github.com/ubunye-ai-ecosystems</a></p>
+<p>🚀 Whether you’re building AI for space tech, smart grids, autonomous cars, or township telemetry —
+if it’s noisy, dynamic, and uncertain, we’ve got you covered.</p>
 <section id="features">
-<h1>Features<a class="headerlink" href="#features" title="Permalink to this heading"></a></h1>
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p><strong>Kalman Filtering:</strong> Robust state estimation with uncertainty quantification.</p></li>
-<li><p><strong>Particle Filtering:</strong> Non-linear and non-Gaussian filtering methods.</p></li>
-<li><p><strong>Distributed Computation:</strong> Leveraging Dask for scalability.</p></li>
-<li><p><strong>Uncertainty Quantification:</strong> Built-in methods for assessing estimation confidence [TODO]</p></li>
+<li><p><strong>Bayesian Filtering:</strong> Supports both linear (Kalman) and nonlinear/non-Gaussian (Particle) filtering for robust state estimation in dynamic systems.</p></li>
+<li><p><strong>Distributed Computation:</strong> Built on Dask, enabling parallel and out-of-core filtering for large-scale or streaming data.</p></li>
+<li><p><strong>Uncertainty Quantification:</strong> Includes tools to quantify estimation confidence through residual analysis, covariance estimation, and adaptive strategies.</p></li>
+<li><p><strong>Parameter Estimation:</strong> Advanced methods for estimating system parameters using Bayesian techniques, including maximum likelihood and cross-validation.</p></li>
+<li><p><strong>User-Friendly API:</strong> Clean, modular, and scikit-learn like API — with examples, documentation, and sensible defaults so you can go from idea 💡 to insight 📈 fast.</p></li>
 </ul>
-<section id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
-<p>Getting started with <strong>tfilterspy</strong> is as easy as Pi ! 🍰</p>
-<p>No need for complicated rituals or secret handshakes—just open your terminal and run:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>tfilterspy
-</pre></div>
-</div>
-<p>That’s it! In a flash, you’re all set to start filtering out the noise from your data.</p>
-<p>Prefer to tinker under the hood? If you’re feeling adventurous, clone the repo and install it in editable mode:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/LeparaLaMapara/tfilterspy.git
-<span class="nb">cd</span><span class="w"> </span>tfilterspy
-pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
-</pre></div>
-</div>
-<p>Now, let the magic of Bayesian filtering begin! Enjoy the fun of transforming noisy data into clear insights with <strong>tfilterspy</strong>.</p>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="api_usage.html">API Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api_usage.html#overview">Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_usage.html#key-concepts">Key Concepts:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_usage.html#key-classes">Key Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_usage.html#detailed-documentation">Detailed Documentation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_usage.html#additional-notes">Additional Notes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api_usage.html#indices-and-tables">Indices and Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installing-from-source">Installing from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#requirements">Requirements</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="examples_index.html">Real World Use Cases🎢</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_cheatsheet.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api_cheatsheet.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_cheatsheet.html#core-concepts">🧠 Core Concepts:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_cheatsheet.html#key-classes">Key Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_cheatsheet.html#modules">Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_cheatsheet.html#developer-notes">Developer Notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api_cheatsheet.html#indices-and-tables">Indices and Tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Real World Use-Cases 🎢</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples.html#use-case-templates">Use-Case Templates</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html">Step 1: Predict (What do we <em>think</em> will happen?)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-2-update-what-did-we-actually-see">Step 2: Update (What did we <em>actually</em> see?)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-3-correct-update-our-guess-based-on-new-info">Step 3: Correct (Update our guess based on new info)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#intuition">Intuition:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mathematics.html#mathematics-behind-the-particle-filter">Mathematics Behind the Particle Filter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-1-initialization">Step 1: Initialization 🐣</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-2-prediction">Step 2: Prediction 🔮</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-3-measurement-update">Step 3: Measurement Update 🔍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-4-resampling">Step 4: Resampling ♻️</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-5-estimate-state">Step 5: Estimate State 🎯</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#bonus-residuals">Bonus: Residuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#id1">Intuition:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mathematics.html#parameter-estimation-methods">Parameter Estimation Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#notation">Notation:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#residual-analysis">1. Residual Analysis 📊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#maximum-likelihood-estimation-mle">2. Maximum Likelihood Estimation (MLE) 🔍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#cross-validation-cv">3. Cross-Validation (CV) 🔁</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#adaptive-filtering-online-updating">4. Adaptive Filtering (Online Updating) 🔄</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">TFilterPy</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="MAINTAINERS.html">Maintainers of TFilterPy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="MAINTAINERS.html#current-maintainers">Current Maintainers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MAINTAINERS.html#maintainer-responsibilities">Maintainer Responsibilities</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MAINTAINERS.html#how-to-become-a-maintainer">How to Become a Maintainer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="MAINTAINERS.html#contact-support">Contact &amp; Support</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contributing to TFilterPy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#code-style">Code Style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#branching-strategy">Branching Strategy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#writing-documentation">Writing Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#pull-requests">Pull Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#need-help">Need Help?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CONTRIBUTING.html#license">License</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </section>
-<section id="real-world-use-cases">
-<h2>Real World Use Cases🎢<a class="headerlink" href="#real-world-use-cases" title="Permalink to this heading"></a></h2>
-<p>Welcome to the Notebook Playground – where your Jupyter notebooks come to life and show off their filtering magic! ✨</p>
-<p>For a full list of our example notebooks, check them out on GitHub:</p>
-<p><a class="reference external" href="https://github.com/masht01/tfilterspy/tree/main/examples/notebooks">Visit Our Examples Directory</a></p>
-</section>
-</section>
-<section id="additional-resources">
-<h1>Additional Resources<a class="headerlink" href="#additional-resources" title="Permalink to this heading"></a></h1>
-<ul class="simple">
-<li><p><a class="reference external" href="genindex.html">API Reference</a></p></li>
-<li><p><a class="reference external" href="modulues.html">Module Index</a></p></li>
-<li><p><a class="reference external" href="search.html">Search</a></p></li>
-</ul>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="api_usage.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="installation.html" class="btn btn-neutral float-right" title="Installation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

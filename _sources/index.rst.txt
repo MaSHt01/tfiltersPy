@@ -7,63 +7,60 @@
    :width: 500px
    :align: center
 
+.. raw:: html
 
- Welcome to tfilterspy documentation 
------------------------------------------
-Where we say "Sawubona, Molo, Hallo, Dumela, Ndaa, Xewani, and a Dinstang in Sipitori style!" 
+   <br>
 
-**TFiltersPy is your new favorite Python library for implementing state-of-the-art Bayesian filtering techniques like Kalman Filters and Particle Filters. 
-Whether you're working on noisy linear systems, nonlinear dynamics, or want to sound cool at a party when you say "I coded my own Kalman Filter," this is the library for you!** 
+.. image:: https://img.shields.io/pypi/v/tfilterspy.svg
+   :target: https://pypi.org/project/tfilterspy/
+   :alt: PyPI version
+.. image:: https://img.shields.io/pypi/l/tfilterspy.svg
+   :target: https://github.com/ubunye-ai-ecosystems/tfilterspy/blob/main/LICENSE
+   :alt: License
+.. image:: https://img.shields.io/badge/made%20in-Africa-red.svg
+   :target: https://github.com/ubunye-ai-ecosystems
+   :alt: Made in Africa
+.. image:: https://img.shields.io/github/stars/ubunye-ai-ecosystems/tfilterspy.svg?style=social
+   :target: https://github.com/ubunye-ai-ecosystems/tfilterspy
+   :alt: GitHub Stars
+
+Welcome to TFilterPy's Documentation!
+=====================================
+
+.. raw:: html
+
+   <p style="color: crimson; font-size: 0.9em; margin-top: 0.5em;">
+     Where we say: <strong>Sawubona, Molo, Hallo, Dumela, Ndaa, Xewani</strong>,
+     and a heartfelt <strong>Dinstang</strong> in pure Sipitori style 🇿🇦✨.
+   </p>
+
+**TFilterPy** is your go-to open-source Python library for applying state-of-the-art Bayesian filtering — built with the power of Dask for scale,  
+the elegance of Kalman and Particle Filters for precision, and a sprinkle of local flavor to make it proudly African.
+
+✨ This library is part of the **Ubunye Artificial Intelligence Ecosystem (UIAE)** —  
+a collaborative initiative to build powerful, locally rooted, and globally relevant AI tools.  
+Explore more projects at 👉 https://github.com/ubunye-ai-ecosystems
+
+🚀 Whether you're building AI for space tech, smart grids, autonomous cars, or township telemetry —  
+if it’s noisy, dynamic, and uncertain, we’ve got you covered.
 
 Features
 --------
-- **Kalman Filtering:** Robust state estimation with uncertainty quantification.
-- **Particle Filtering:** Non-linear and non-Gaussian filtering methods.
-- **Distributed Computation:** Leveraging Dask for scalability.
-- **Uncertainty Quantification:** Built-in methods for assessing estimation confidence [TODO]
-
-Installation
-============
-
-Getting started with **tfilterspy** is as easy as Pi ! 🍰
-
-No need for complicated rituals or secret handshakes—just open your terminal and run:
-
-.. code-block:: bash
-
-    pip install tfilterspy
-
-That's it! In a flash, you're all set to start filtering out the noise from your data.
-
-Prefer to tinker under the hood? If you're feeling adventurous, clone the repo and install it in editable mode:
-
-.. code-block:: bash
-
-    git clone https://github.com/LeparaLaMapara/tfilterspy.git
-    cd tfilterspy
-    pip install -e .
-
-Now, let the magic of Bayesian filtering begin! Enjoy the fun of transforming noisy data into clear insights with **tfilterspy**.
+- **Bayesian Filtering:** Supports both linear (Kalman) and nonlinear/non-Gaussian (Particle) filtering for robust state estimation in dynamic systems.
+- **Distributed Computation:** Built on Dask, enabling parallel and out-of-core filtering for large-scale or streaming data.
+- **Uncertainty Quantification:** Includes tools to quantify estimation confidence through residual analysis, covariance estimation, and adaptive strategies.
+- **Parameter Estimation:** Advanced methods for estimating system parameters using Bayesian techniques, including maximum likelihood and cross-validation.
+- **User-Friendly API:** Clean, modular, and scikit-learn like API — with examples, documentation, and sensible defaults so you can go from idea 💡 to insight 📈 fast.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   api_usage
-   examples_index
-
-Real World Use Cases🎢
-======================
-
-Welcome to the Notebook Playground – where your Jupyter notebooks come to life and show off their filtering magic! ✨
-
-For a full list of our example notebooks, check them out on GitHub: 
-
-`Visit Our Examples Directory <https://github.com/masht01/tfilterspy/tree/main/examples/notebooks>`_
-
-Additional Resources
---------------------
-- `API Reference <genindex.html>`_
-- `Module Index <modulues.html>`_
-- `Search <search.html>`_
+   installation
+   api_cheatsheet
+   examples
+   mathematics
+   modules
+   MAINTAINERS
+   CONTRIBUTING
 

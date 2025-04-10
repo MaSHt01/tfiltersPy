@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contributing to TFilterPy &mdash; tfilterspy 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Maintainers of TFilterPy" href="MAINTAINERS.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            tfilterspy
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api_cheatsheet.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Real World Use-Cases 🎢</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html">Step 1: Predict (What do we <em>think</em> will happen?)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-2-update-what-did-we-actually-see">Step 2: Update (What did we <em>actually</em> see?)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-3-correct-update-our-guess-based-on-new-info">Step 3: Correct (Update our guess based on new info)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#intuition">Intuition:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-1-initialization">Step 1: Initialization 🐣</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-2-prediction">Step 2: Prediction 🔮</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-3-measurement-update">Step 3: Measurement Update 🔍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-4-resampling">Step 4: Resampling ♻️</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#step-5-estimate-state">Step 5: Estimate State 🎯</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#bonus-residuals">Bonus: Residuals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#id1">Intuition:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#notation">Notation:</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#residual-analysis">1. Residual Analysis 📊</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#maximum-likelihood-estimation-mle">2. Maximum Likelihood Estimation (MLE) 🔍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#cross-validation-cv">3. Cross-Validation (CV) 🔁</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mathematics.html#adaptive-filtering-online-updating">4. Adaptive Filtering (Online Updating) 🔄</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">TFilterPy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MAINTAINERS.html">Maintainers of TFilterPy</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing to TFilterPy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-style">Code Style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#branching-strategy">Branching Strategy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#writing-documentation">Writing Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pull-requests">Pull Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#need-help">Need Help?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#license">License</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">tfilterspy</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Contributing to TFilterPy</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/CONTRIBUTING.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="contributing-to-tfilterpy">
+<h1>Contributing to TFilterPy<a class="headerlink" href="#contributing-to-tfilterpy" title="Permalink to this heading"></a></h1>
+<p>First off, thank you for considering contributing to <strong>TFilterPy</strong>! 🙌
+Your contributions help us build better, faster, and more meaningful filtering tools for the world.</p>
+<p>We welcome all kinds of contributions:
+- 🔧 Bug fixes
+- 📚 Documentation improvements
+- ✨ New features or filters
+- 🧪 Unit tests and validation
+- 💡 Suggestions and discussions</p>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p><strong>Fork the repository</strong>
+Go to <a class="reference external" href="https://github.com/ubunye-ai-ecosystems/tfilterspy">https://github.com/ubunye-ai-ecosystems/tfilterspy</a> and click “Fork”.</p></li>
+<li><p><strong>Clone your fork</strong>
+.. code-block:: bash</p>
+<blockquote>
+<div><p>git clone <a class="reference external" href="https://github.com/your-username/tfilterspy.git">https://github.com/your-username/tfilterspy.git</a>
+cd tfilterspy</p>
+</div></blockquote>
+</li>
+<li><p><strong>Create a virtual environment</strong>
+.. code-block:: bash</p>
+<blockquote>
+<div><p>python -m venv venv
+source venv/bin/activate  # On Windows use <cite>venvScriptsactivate</cite></p>
+</div></blockquote>
+</li>
+<li><p><strong>Install dependencies</strong>
+.. code-block:: bash</p>
+<blockquote>
+<div><p>pip install -e .[dev]</p>
+</div></blockquote>
+<p>This installs the library along with development tools like <cite>pytest</cite>, <cite>black</cite>, <cite>ruff</cite>, and <cite>sphinx</cite>.</p>
+</li>
+<li><p><strong>Run the tests</strong>
+.. code-block:: bash</p>
+<blockquote>
+<div><p>pytest</p>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="code-style">
+<h2>Code Style<a class="headerlink" href="#code-style" title="Permalink to this heading"></a></h2>
+<p>We follow [PEP8](<a class="reference external" href="https://peps.python.org/pep-0008/">https://peps.python.org/pep-0008/</a>).
+Before submitting, please run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>black<span class="w"> </span>.
+ruff<span class="w"> </span>.<span class="w"> </span>--fix
+</pre></div>
+</div>
+<p>This ensures your code is formatted and linted properly.</p>
+</section>
+<section id="branching-strategy">
+<h2>Branching Strategy<a class="headerlink" href="#branching-strategy" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><cite>main</cite>: Stable releases</p></li>
+<li><p><cite>dev</cite>: Active development</p></li>
+<li><p>Feature branches: <cite>feature/your-awesome-thing</cite></p></li>
+<li><p>Bugfix branches: <cite>fix/some-bug-name</cite></p></li>
+</ul>
+</section>
+<section id="writing-documentation">
+<h2>Writing Documentation<a class="headerlink" href="#writing-documentation" title="Permalink to this heading"></a></h2>
+<p>To build docs locally:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>docs
+make<span class="w"> </span>html
+open<span class="w"> </span>_build/html/index.html
+</pre></div>
+</div>
+<p>Notebooks for examples should be placed in:
+<cite>examples/notebooks/your_usecase_here.ipynb</cite></p>
+</section>
+<section id="pull-requests">
+<h2>Pull Requests<a class="headerlink" href="#pull-requests" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Push your changes and open a pull request to <cite>dev</cite>.</p></li>
+<li><p>Add a descriptive title and explain your motivation.</p></li>
+<li><p>Link related issues, if any.</p></li>
+</ol>
+<p>All PRs will go through:
+- ✅ CI testing
+- 🧪 Code review
+- 📚 Docs build check</p>
+</section>
+<section id="need-help">
+<h2>Need Help?<a class="headerlink" href="#need-help" title="Permalink to this heading"></a></h2>
+<p>Open an issue or join the discussion at
+<a class="reference external" href="https://github.com/ubunye-ai-ecosystems/tfilterspy/discussions">https://github.com/ubunye-ai-ecosystems/tfilterspy/discussions</a></p>
+<p>We’re all here to learn and build together. ❤️</p>
+</section>
+<section id="license">
+<h2>License<a class="headerlink" href="#license" title="Permalink to this heading"></a></h2>
+<p>By contributing, you agree that your contributions will be licensed under the same license as this project (MIT, Apache 2.0, etc.).</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="MAINTAINERS.html" class="btn btn-neutral float-left" title="Maintainers of TFilterPy" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Thabang Mashinin-Sekhoto, Lebogang Mashinini-Sekhoto, Palesa Mashinini-Sekhoto.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
