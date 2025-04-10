@@ -56,7 +56,7 @@ Features
    :maxdepth: 1
    :caption: Contents:
 
-   INSTALLATION
+   installation
    API_DOCUMENTATION
    EXAMPLES
    LITERATURE
