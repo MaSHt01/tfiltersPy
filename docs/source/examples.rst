@@ -82,6 +82,7 @@ path_to_disaster_tweets= r'C:\Users\thabanglukhetho\Documents\gits\tfilterPy\exa
 4. Fit and Predict
 
 .. code-block:: python
+
     kf.fit(X_dask)
     smoothed_topics = kf.predict().compute()
 
@@ -89,6 +90,7 @@ path_to_disaster_tweets= r'C:\Users\thabanglukhetho\Documents\gits\tfilterPy\exa
 5. Plot Raw vs Smoothed Topics (first 1000 tweets)
 
 .. code-block:: python
+
     plt.figure(figsize=(12, 8))
     for i in range(n_topics):
         plt.subplot(n_topics, 1, i + 1)
@@ -105,6 +107,7 @@ path_to_disaster_tweets= r'C:\Users\thabanglukhetho\Documents\gits\tfilterPy\exa
 6. Interpret Topics 
 
 .. code-block:: python
+    
     feature_names = vectorizer.get_feature_names_out()
     for i, topic in enumerate(lda.components_):
         top_words = [feature_names[j] for j in topic.argsort()[-5:]]
