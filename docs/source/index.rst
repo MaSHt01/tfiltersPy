@@ -57,9 +57,10 @@ Features
    :caption: Contents:
 
    installation
-   api_cheatsheet
    examples
+   api_cheatsheet
    modules
+   literature
    maintainers
    contributing
 

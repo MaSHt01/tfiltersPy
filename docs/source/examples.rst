@@ -1,4 +1,4 @@
-Real World Use-Cases 🎢
+Real World Usecases 🎢
 =======================
 
 Welcome to the Notebook Playground -  where your Jupyter notebooks come to life and show off their filtering magic! ✨  
@@ -24,7 +24,6 @@ Each example notebook typically follows this structure:
 6. **Interpretation** - Gain insights into dynamics, trends, and uncertainty.
 
 
-
 ---------------------------------
 Topic Modeling + Kalman Filtering
 ---------------------------------
@@ -32,7 +31,7 @@ Topic Modeling + Kalman Filtering
 This notebook shows how to use TFiltersPy to smooth topic probabilities over time in a stream of disaster-related tweets. 
 Smooth chaotic topic trends in disaster-related tweets to track evolving narratives over time.
 
-path_to_disaster_tweets= r'C:\Users\thabanglukhetho\Documents\gits\tfilterPy\examples\data\train_nlp.csv'
+
 
 
 .. code-block:: python
@@ -49,6 +48,7 @@ path_to_disaster_tweets= r'C:\Users\thabanglukhetho\Documents\gits\tfilterPy\exa
 
 .. code-block:: python
 
+    path_to_disaster_tweets= r'/../../tfilterspy/examples/data/train_nlp.csv'
     data_path = path_to_disaster_tweets  # Update after download
     df = pd.read_csv(data_path)
     tweets = df['text'].values  # ~7613 tweets
@@ -107,7 +107,7 @@ path_to_disaster_tweets= r'C:\Users\thabanglukhetho\Documents\gits\tfilterPy\exa
 6. Interpret Topics 
 
 .. code-block:: python
-    
+
     feature_names = vectorizer.get_feature_names_out()
     for i, topic in enumerate(lda.components_):
         top_words = [feature_names[j] for j in topic.argsort()[-5:]]
