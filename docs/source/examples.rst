@@ -10,7 +10,6 @@ This section showcases real-world applications of TFiltersPy in noisy, messy, dy
 
 🔗 `Visit the Examples Directory <https://github.com/ubunye-ai-ecosystems/tfilterspy/tree/main/examples/notebooks>`_
 
----
 
 Use-Case Templates
 ------------------
@@ -24,26 +23,6 @@ Each example notebook typically follows this structure:
 5. **Visualization** - Plot raw vs filtered estimates.
 6. **Interpretation** - Gain insights into dynamics, trends, and uncertainty.
 
-
-.. You can follow up with sections like:
-
-.. ### 🧵 Topic Modeling with Kalman Filtering
-
-.. > Smooth chaotic topic trends in disaster-related tweets to track evolving narratives over time.
-
-.. ### 🚗 Driving Behavior Estimation
-
-.. > Use particle filters to infer safe or risky driving patterns from telematics sensor data in real-time.
-
-.. ### 🌧️ Flood Forecasting with Uncertainty Quantification
-
-.. > Combine historical flood levels with noisy weather forecasts to build an adaptive flood risk scoring system.
-
-.. ### 📉 Time Series Denoising in Finance
-
-.. > Apply Kalman filters to noisy financial signals (like stock prices or trading volume) for cleaner trend analysis.
-
---------
 
 
 ---------------------------------
@@ -67,6 +46,7 @@ path_to_disaster_tweets= r'C:\Users\thabanglukhetho\Documents\gits\tfilterPy\exa
     import matplotlib.pyplot as plt
 
 1. Load Disaster Tweets
+
 .. code-block:: python
 
     data_path = path_to_disaster_tweets  # Update after download
@@ -75,6 +55,7 @@ path_to_disaster_tweets= r'C:\Users\thabanglukhetho\Documents\gits\tfilterPy\exa
     print(f"Number of tweets: {len(tweets)}")
 
 2. Preprocess and Extract Topics
+
 .. code-block:: python
 
     vectorizer = CountVectorizer(max_features=5000, stop_words='english')
@@ -86,8 +67,9 @@ path_to_disaster_tweets= r'C:\Users\thabanglukhetho\Documents\gits\tfilterPy\exa
     print(f"Topic distribution shape: {X_dask.shape}")
 
 3. Kalman Filter Initiative
+
 .. code-block:: python
-    
+
     n_features = 14
     F = np.eye(n_features)  # Static transition (identity for simplicity)
     H = np.eye(n_features)  # Direct observation
@@ -98,12 +80,14 @@ path_to_disaster_tweets= r'C:\Users\thabanglukhetho\Documents\gits\tfilterPy\exa
     kf = DaskKalmanFilter(F, H, Q, R, x0, P0, estimation_strategy="residual_analysis")
 
 4. Fit and Predict
+
 .. code-block:: python
     kf.fit(X_dask)
     smoothed_topics = kf.predict().compute()
 
 
 5. Plot Raw vs Smoothed Topics (first 1000 tweets)
+
 .. code-block:: python
     plt.figure(figsize=(12, 8))
     for i in range(n_topics):
@@ -119,6 +103,7 @@ path_to_disaster_tweets= r'C:\Users\thabanglukhetho\Documents\gits\tfilterPy\exa
 
 
 6. Interpret Topics 
+
 .. code-block:: python
     feature_names = vectorizer.get_feature_names_out()
     for i, topic in enumerate(lda.components_):
