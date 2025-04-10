@@ -56,11 +56,11 @@ Features
    :maxdepth: 2
    :caption: Contents:
 
-   installation
-   api_cheatsheet
-   examples
-   mathematics
-   modules
+   INSTALLATION
+   API_DOCUMENTATION
+   EXAMPLES
+   LITERATURE
+   MODULES
    MAINTAINERS
    CONTRIBUTING
 
